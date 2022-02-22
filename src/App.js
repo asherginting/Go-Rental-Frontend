@@ -1,13 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button'
+import React from 'react'
 
 function App() {
+  const [toggle, setToggle] = React.useState(true)
+  
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {toggle && <Button sapa = "Hello" />}
+          <button onClick={()=>setToggle(false)}>Hide </button>
         </p>
         <a
           className="App-link"
