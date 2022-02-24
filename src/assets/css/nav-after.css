@@ -1,0 +1,69 @@
+.nav-after nav {
+  height: 100px;
+}
+
+.nav-after nav .navigation {
+  font-size: 1rem;
+  padding: 0 65px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-after nav .navbar-collapse {
+  padding-right: 0;
+}
+
+.nav-after nav .mail-profile img {
+  width: 54.62px;
+}
+
+.nav-after .message {
+  text-decoration: none;
+}
+
+.nav-after .total-message {
+  background-color: #0085DF;
+  position: relative;
+  top: -18px;
+  margin-right: -18px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.nav-after .icon-message {
+  font-size: 55px;
+  color: #0d9299;
+}
+
+.nav-after .profile img {
+  border-radius: 30px;
+}
+
+@media all and (max-width: 991px) {
+  .nav-after nav {
+    height: 95px;
+  }
+
+  .nav-after nav .navigation#navbarNav {
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 0;
+  }
+
+  .nav-after .navbar-nav,
+  .nav-after .mail-profile {
+    width: 100%;
+  }
+
+  .nav-after .mail-profile {
+    flex-direction: column;
+    align-items: start !important;
+  }
+
+  .nav-after .mail-profile a {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

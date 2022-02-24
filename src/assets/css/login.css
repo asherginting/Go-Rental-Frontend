@@ -9,7 +9,7 @@ header.login {
   color: #fff;
 }
 
-header .opacity {
+header.login .opacity {
   height: 805px;
   background-color: rgba(0, 0, 0, 0.5);
 }

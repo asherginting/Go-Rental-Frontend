@@ -1,0 +1,113 @@
+.signup-page .img-section,
+.signup-page .form-section {
+  padding: 0;
+  margin: 0;
+}
+
+.signup-page .img-section {
+  background-image: url(../images/signup/header-signup.png);
+  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signup-page .form-section {
+  background-color: #fff;
+}
+
+.signup-page form h2.header-sign {
+  width: 90%;
+}
+
+.signup-page input,
+.signup-page .btn,
+.signup-page .another {
+  width: 86%;
+  height: 79px;
+  border-radius: 10px;
+  line-height: 2.5;
+  margin: 17px 0;
+  font-size: 22px;
+}
+
+.signup-page h2 {
+  font-family: 'Playfair Display', Courier, monospace;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.signup-page input {
+  padding-left: 30px;
+  background: rgba(78, 78, 78, 0.1);
+  border: none;
+}
+
+.signup-page input:focus {
+  padding-left: 30px;
+  outline: #32DBC6;
+}
+
+.signup-page .signup {
+  color: #fff;
+  background-color: #32DBC6;
+}
+
+.signup-page .another hr {
+  height: 2px;
+}
+
+.signup-page .text-another {
+  font-size: 20px;
+}
+
+.signup-page .signup:hover,
+.signup-page .login:hover,
+.signup-page .google:hover {
+  box-shadow: -3px -4px 26px -5px rgba(50, 219, 198, 0.53);
+  -webkit-box-shadow: -3px -4px 26px -5px rgba(50, 219, 198, 0.53);
+  -moz-box-shadow: -3px -4px 26px -5px rgba(50, 219, 198, 0.53);
+}
+
+.signup-page .google,
+.signup-page .login,
+.signup-page .signup {
+  box-shadow: -3px -4px 26px -5px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: -3px -4px 26px -5px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: -3px -4px 26px -5px rgba(0, 0, 0, 0.53);
+}
+
+.signup-page .google:hover,
+.signup-page .login:hover,
+.signup-page .signup:hover {
+  background-color: #EBEFD0;
+  color: #085F63;
+}
+
+.signup-page .login {
+  background-color: #151b1b;
+  color: #32DBC6;
+}
+
+.signup-page .row {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+@media (max-width: 991px) {
+  .signup-page form .header-sign {
+    margin: 20px 0 !important;
+  }
+
+  .signup-page .text-another {
+    font-size: 15px;
+  }
+
+  .signup-page input,
+  .signup-page .btn,
+  .signup-page .another {
+    height: 55px;
+    line-height: 2;
+    margin: 17px 0;
+    font-size: 20px;
+  }
+}
