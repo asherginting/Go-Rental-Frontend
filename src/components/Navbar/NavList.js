@@ -8,7 +8,7 @@ export default function NavList() {
         <NavLink to='/' className='nav-link' activeClassName='active'>Home</NavLink>
       </li>
       <li class="nav-item mx-xl-3">
-        <NavLink to='/vehicle/type' className='nav-link' activeClassName='active'>Vehicle Type</NavLink>
+        <NavLink to='/vehicle-type' className='nav-link' activeClassName='active'>Vehicle Type</NavLink>
       </li>
       <li class="nav-item me-xl-3">
         <NavLink to='/history' className='nav-link' activeClassName='active'>History</NavLink>
