@@ -1,19 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react'
 // import NavAfter from '../components/NavAfterLogin';
 import '../assets/css/vehicle-type.css'
 import DataVehicle from '../components/DataVehicle';
 import ProductHighlight from '../components/ProductHighlight';
 import {BiSearchAlt2} from 'react-icons/bi'
 import {IoChevronForward} from 'react-icons/io5'
+import { Link } from 'react-router-dom';
 
-export default class VehicleType extends Component {
+const VehicleType = () => {
 
-  product = (head, link, arr) => {
+  const product = (head, link, arr) => {
     return (
       <section className='container'>
         <div class="d-flex justify-content-between head">
           <h2>{head}</h2>
-          <a href={link} class="view-all">View all <IoChevronForward /></a>
+          <Link to='/vehicle/popular' class="view-all">View all <IoChevronForward /></Link>
         </div>
         <div className="row">
           {arr.map((data) => {
@@ -25,21 +26,24 @@ export default class VehicleType extends Component {
     )
   }
 
-  render() {
-    return (      
-      <div className='vehicle-type'>
-        <form className="container d-flex position-relative">
-          <input className="form-control" type="search" placeholder="Search vehicle (ex. cars, cars name)" />
-          <button type="submit" className="btn position-absolute end-0" aria-label="search button">
-            <i className="search-icon"><BiSearchAlt2 /></i>
-          </button>
-        </form>
+  return (      
+    <div className='vehicle-type'>
+      <form className="container d-flex position-relative">
+        <input className="form-control" type="search" placeholder="Search vehicle (ex. cars, cars name)" />
+        <button type="submit" className="btn position-absolute end-0" aria-label="search button">
+          <i className="search-icon"><BiSearchAlt2 /></i>
+        </button>
+      </form>
 
-        {this.product('Popular in town', '#', DataVehicle.popularInTown)}
-        {this.product('Cars', '#', DataVehicle.cars)}
-        {this.product('Motorbike', '#', DataVehicle.motorbike)}
-        {this.product('Bike', '#', DataVehicle.bike)}
-      </div>
-    )
-  }
+      {product('Popular in town', '#', DataVehicle.popularInTown)}
+      {product('Cars', '#', DataVehicle.cars)}
+      {product('Motorbike', '#', DataVehicle.motorbike)}
+      {product('Bike', '#', DataVehicle.bike)}
+    </div>
+  )
+  // render() {
+    
+  // }
 }
+
+export default VehicleType

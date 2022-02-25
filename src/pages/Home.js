@@ -48,22 +48,28 @@ export default class Home extends Component {
               <div className="row">
                 <div className="col-sm-6">
                   <select className="option-form">
-                    <option>Location</option>
-                    <option></option>
+                  <option hidden>Location</option>
+                  <option>Bali</option>
+                  <option>Yogyakarta</option>
+                  <option>Jakarta</option>
+                  <option>Kalimantan</option>
+                  <option>Malang</option>
                   </select>
                 </div>
                 <div className="col-sm-6">
                   <select className="option-form">
-                    <option>Type</option>
-                    <option></option>
+                  <option hidden>Type</option>
+                  <option>Bike</option>
+                  <option>Cars</option>
+                  <option>Motorbike</option>
                   </select>
                 </div>
               </div>
               <div className="row">
                 <div className="col-sm-6">
                   <select className="option-form">
-                    <option>Payment</option>
-                    <option></option>
+                  <option>Cash</option>
+                  <option>Paylater</option>
                   </select>
                 </div>
                 <div className="col-sm-6">

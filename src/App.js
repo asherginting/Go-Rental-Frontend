@@ -88,6 +88,11 @@ import ForgotPassword from "./pages/ForgotPassword";
 import VehicleType from "./pages/VehicleType";
 import VehiclePopular from "./pages/VehiclePopular";
 import VehicleDetail from "./pages/VehicleDetail";
+import ListItem from './pages/ListItem'
+import Features from './pages/Features'
+import Pricing from './pages/Pricing'
+import DetailItem from './pages/DetailItem'
+import CharacterList from './pages/CharacterList'
 
 export default class App extends Component {
   state = {
@@ -112,15 +117,21 @@ export default class App extends Component {
           <Route path="signup" element={
             <Layout noNavbar={true} signup={true}><Signup /></Layout>
           } />
-          <Route path="vehicle/type" element={
+          <Route path="vehicle-type" element={
             <Layout isLogin={isLogged}><VehicleType /></Layout>
           } />
           <Route path="vehicle/popular" element={
             <Layout isLogin={isLogged} vehiclePopular={true}><VehiclePopular /></Layout>
           } />
-          <Route path="vehicle/detail" element={
+          <Route path="vehicle/:id" element={
             <Layout isLogin={isLogged}><VehicleDetail /></Layout>
           } />
+          <Route path='list' element={<ListItem />} />
+          {/* <Route path='vehicles' element={<ListItem />} />
+          <Route path='vehicles/:id' element={<DetailItem />} /> */}
+          <Route path='features' element={<Features />} />
+          <Route path='pricing' element={<Pricing />} />
+          <Route path='characters' element={<CharacterList />} />
         </Routes>
         {/* <VehiclePopular /> */}
         {/* <VehicleType /> */}
