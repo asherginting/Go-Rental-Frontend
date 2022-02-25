@@ -1,31 +1,38 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Nunito', sans-serif;
   margin: 0;
   padding: 0;
 }
+
 .vehicle-detail nav {
   height: 150px;
 }
+
 .vehicle-detail nav .navigation {
   font-size: 1rem;
   padding: 0 65px;
   display: flex;
   justify-content: flex-end;
 }
+
 .vehicle-detail nav .navbar-collapse {
   padding-right: 0;
 }
+
 .vehicle-detail nav .mail-profile img {
   width: 54.62px;
 }
+
 .vehicle-detail .message {
   text-decoration: none;
 }
+
 .vehicle-detail .total-message {
-  background-color: #49BEB7;
+  background-color: #0085DF;
   position: relative;
   top: -18px;
   margin-right: -18px;
@@ -33,10 +40,12 @@ body {
   font-size: 15px;
   font-weight: bold;
 }
+
 .vehicle-detail .icon-message {
   font-size: 55px;
-  color: #0d9299;
+  color: #0085DF;
 }
+
 .vehicle-detail .profile img {
   border-radius: 30px;
 }
@@ -45,7 +54,9 @@ body {
 .vehicle-detail .btn:focus {
   box-shadow: none;
 }
-.vehicle-detail .btn-green, .vehicle-detail .btn-black {
+
+.vehicle-detail .btn-green,
+.vehicle-detail .btn-black {
   text-align: center;
   width: 90%;
   padding: 25px 0;
@@ -53,15 +64,19 @@ body {
   font-weight: bold;
   font-size: 20px;
 }
+
 .vehicle-detail .btn-green {
   color: #fff;
-  background-color: #32DBC6;
+  background-color: #0085DF;
 }
+
 .vehicle-detail .btn-black {
   background-color: black;
-  color: #32DBC6;
+  color: #0085DF;
 }
-.vehicle-detail .btn-green:hover, .vehicle-detail .btn-black:hover {
+
+.vehicle-detail .btn-green:hover,
+.vehicle-detail .btn-black:hover {
   background-color: #EBEFD0;
   color: #085F63;
 }
@@ -70,76 +85,101 @@ body {
 .vehicle-detail section {
   margin-top: 40px;
 }
+
 .vehicle-detail .first-section {
   margin-top: 150px;
 }
+
 .vehicle-detail .back {
   text-decoration: none;
   color: black;
 }
+
 .vehicle-detail .back:hover {
-  color: #49BEB7;
+  color: #0085DF;
 }
-.vehicle-detail .back i, .vehicle-detail .head span {
+
+.vehicle-detail .back i,
+.vehicle-detail .head span {
   font-weight: bold;
 }
+
 .vehicle-detail .head span {
   font-size: 28px;
 }
+
 .vehicle-detail .back i {
   font-size: 35px;
 }
+
 /* .img-section, .description-section {
   height: 409px;
 } */
-.vehicle-detail img, .vehicle-detail .cover-image {
+.vehicle-detail img,
+.vehicle-detail .cover-image {
   border-radius: 10px;
 }
+
 .vehicle-detail .description-section {
   padding-left: 100px;
 }
+
 .vehicle-detail .description {
   font-family: 'Playfair Display', Helvetica, sans-serif;
 }
-.vehicle-detail .description  h2 {
+
+.vehicle-detail .description h2 {
   font-size: 45px;
 }
+
 .vehicle-detail .description p {
   font-size: 30px;
 }
+
 .vehicle-detail .price {
   font-family: 'Playfair Display', Helvetica, sans-serif;
   font-weight: 900;
   font-size: 36px;
 }
 
-.vehicle-detail .prev, .vehicle-detail .next, .vehicle-detail .plus, .vehicle-detail .minus {
+.vehicle-detail .prev,
+.vehicle-detail .next,
+.vehicle-detail .plus,
+.vehicle-detail .minus {
   font-size: 40px;
   height: auto;
   width: 75px;
 }
+
 .vehicle-detail .carousel img {
   width: 100%;
 }
+
 .vehicle-detail .total-day {
   margin-top: 20%;
 }
-.vehicle-detail .plus, .minus {
+
+.vehicle-detail .plus,
+.minus {
   padding: 10px;
   border-radius: 10px;
   text-align: center;
 }
+
 .vehicle-detail .plus {
-  background-color: #49BEB7;
+  background-color: #0085DF;
   color: #fff;
 }
+
 .vehicle-detail .count {
   font-weight: 800;
   font-size: 35px;
 }
+
 .vehicle-detail .minus {
   background-color: #EBEFD0;
 }
+
 /* custom */
 .vehicle-detail .carousel-inner {
   position: relative;
@@ -147,6 +187,7 @@ body {
   overflow: hidden;
   margin: 100px;
 }
+
 .vehicle-detail .carousel-item {
   width: 50% !important;
 }
@@ -155,42 +196,52 @@ body {
 .vehicle-detail .reservation .img-section {
   border-radius: 10px;
 }
+
 .vehicle-detail .reservation .img-section img {
   width: auto;
   height: 100%;
 }
+
 .vehicle-detail .reservation .total-day {
   margin-top: 20px;
 }
+
 .vehicle-detail .reservation button {
   padding: 0;
 }
+
 .vehicle-detail .reservation .description-section {
   padding-left: 0;
   padding: 0 20px;
 }
+
 .vehicle-detail .reservation form {
   margin: 0 5px;
 }
+
 .vehicle-detail .reservation input,
 .vehicle-detail .reservation select {
   padding: 20px 0;
   background-color: rgba(159, 163, 161, 0.1);
   border: none;
 }
+
 .vehicle-detail .reservation input.form-control,
 .vehicle-detail .reservation select.form-select {
   padding-left: 20px;
   border-radius: 10px;
   color: gray;
 }
+
 .vehicle-detail .reservation input::placeholder {
   color: gray;
 }
+
 .vehicle-detail .reservation input.form-control:focus,
 .vehicle-detail .reservation select.form-select:focus {
   box-shadow: 0 0 0 0.25rem rgba(13, 253, 161, 0.25);
 }
+
 .vehicle-detail .pay-now .btn-green {
   padding: 20px 0;
   font-size: 24px;
@@ -201,61 +252,76 @@ body {
   position: relative;
   border-radius: 10px;
 }
+
 .vehicle-detail .payment .img-section img {
   position: absolute;
   width: auto;
   height: 100%;
 }
+
 .vehicle-detail .payment .code {
   font-size: 25px;
   font-weight: 900;
   font-family: 'Playfair Display', Times, serif;
 }
+
 .vehicle-detail .payment .description-section {
   padding-left: 0;
 }
+
 .vehicle-detail .payment .rent-data {
   margin-top: 20px;
 }
+
 .vehicle-detail .payment .first-col {
   width: 30.5%;
   margin: 10px 0;
   margin-right: 31px;
 }
+
 .vehicle-detail .payment .second-col {
   margin: 10px 0;
   width: 68%;
 }
+
 .vehicle-detail .payment .reservation-date {
   margin-right: 30%;
 }
+
 .vehicle-detail .payment .border {
   border-radius: 8px;
   padding: 30px 40px;
 }
+
 /* .qty-border {
   padding: 20px 30px;
 } */
 .vehicle-detail .payment .rent-data .fw-bold {
   font-size: 25px;
 }
+
 .vehicle-detail .payment .second-row {
   height: 200px;
 }
+
 .vehicle-detail .payment .code-section {
   margin-right: 30px;
 }
+
 .vehicle-detail .payment .payment-code {
   padding: 0 16px
 }
+
 .vehicle-detail .payment .payment-code,
 .vehicle-detail .payment .form-select {
   height: 75px;
   border-radius: 8px;
 }
+
 .vehicle-detail .payment .form-select {
   border: 1px solid black;
 }
+
 .vehicle-detail .btn-copy {
   padding: 5px;
   width: 21%;
@@ -266,69 +332,87 @@ body {
     padding-left: 45px;
   }
 }
+
 @media all and (max-width: 1199px) {
   .vehicle-detail .payment .first-col {
     width: 51.5%;
   }
 }
+
 @media all and (max-width: 991px) {
   .vehicle-detail nav {
     height: 95px;
   }
+
   .vehicle-detail nav .navigation#navbarNav {
     align-items: flex-end;
     flex-direction: column;
     margin: 20px 0;
     padding: 0;
   }
+
   .vehicle-detail .navbar-nav,
   .vehicle-detail .mail-profile {
     width: 100%;
   }
+
   .vehicle-detail .mail-profile {
     flex-direction: column;
     align-items: start !important;
   }
+
   .vehicle-detail .mail-profile a {
     width: 100%;
   }
+
   .vehicle-detail nav form {
     margin: 20px 0;
   }
+
   .vehicle-detail .reservation .img-section img {
     width: 100%;
     height: auto;
   }
+
   .vehicle-detail .img-section {
     text-align: center;
   }
+
   .vehicle-detail .description-section {
     margin-top: 40px;
     padding-left: 0;
   }
+
   .vehicle-detail .total-day {
     margin-top: 10%;
   }
+
   .vehicle-detail .description-section {
     width: 95%;
   }
+
   .vehicle-detail .reservation .description-section {
     width: 100%;
   }
+
   /* payment */
   .vehicle-detail .payment .description-section {
     width: auto;
     margin-top: 0;
   }
+
   .vehicle-detail .payment .img-section {
     text-align: unset;
   }
+
   .vehicle-detail .payment .copy-contain {
     width: auto !important;
   }
+
   .vehicle-detail .payment .description h2 {
     font-size: 32px;
   }
+
   .vehicle-detail .payment .description p,
   .vehicle-detail .payment .code,
   .vehicle-detail .payment .copy-contain .btn,
@@ -341,134 +425,170 @@ body {
     display: flex;
     align-items: center;
   }
+
   .vehicle-detail .payment h2 {
     font-size: 14px;
   }
+
   .vehicle-detail .btn-copy {
     padding: 3px;
     font-size: 11px;
     width: 28%;
   }
 }
+
 @media all and (max-width: 768px) {
   .vehicle-detail .carousel {
     margin-bottom: 45px;
   }
+
   .vehicle-detail .total-day {
     margin: auto;
     padding-left: 0;
     width: 70%;
   }
+
   .vehicle-detail section {
     margin-top: 50px;
   }
+
   .vehicle-detail .total-day {
     margin-top: 5%;
   }
-  .vehicle-detail .btn-green, .vehicle-detail .btn-black {
+
+  .vehicle-detail .btn-green,
+  .vehicle-detail .btn-black {
     padding: 15px 0;
     font-size: 15px;
     width: 100%;
   }
+
   /* payment */
   .vehicle-detail .payment .detail-vehicle {
     padding-top: 0 !important;
   }
+
   .vehicle-detail .payment .img-section,
   .vehicle-detail .payment .img-section img {
     position: unset;
   }
+
   .vehicle-detail .payment .img-section img {
     width: 100%;
     height: auto;
   }
+
   .vehicle-detail .payment .description h2 {
     font-size: 20px;
   }
+
   .vehicle-detail .payment .description p,
   .vehicle-detail .payment .code,
   .vehicle-detail .payment .copy-contain .btn,
   .vehicle-detail .pay-now .btn {
     font-size: 10px;
   }
+
   .vehicle-detail .payment .description p,
   .vehicle-detail .payment .status,
   .vehicle-detail .payment .code-container,
   .vehicle-detail .payment .copy-contain {
     margin: 0 !important;
   }
+
   .vehicle-detail .payment .border {
     padding: 22px 10px;
   }
+
   .vehicle-detail .payment .rent-data .fw-bold,
   .vehicle-detail .payment span,
   .vehicle-detail .payment td {
     font-size: 14px;
   }
+
   .vehicle-detail .payment .reservation-date {
     margin-right: 3%;
   }
+
   .vehicle-detail .payment .second-row {
     height: 120px;
   }
+
   .vehicle-detail .payment .second-row.border {
     padding: 0px 10px;
   }
+
   .vehicle-detail .payment .order-details,
   .vehicle-detail .payment .identity {
     display: flex;
     align-items: center;
   }
+
   .vehicle-detail .payment h2 {
     font-size: 14px;
   }
+
   .vehicle-detail .btn-copy {
     padding: 3px;
     font-size: 11px;
     width: 28%;
   }
-  .vehicle-detail .payment .payment-code, .vehicle-detail .payment .form-select {
+
+  .vehicle-detail .payment .payment-code,
+  .vehicle-detail .payment .form-select {
     height: 47px;
   }
+
   .vehicle-detail .payment .form-select {
     font-size: 10px;
   }
+
   .vehicle-detail .btn-reservation {
     margin: 20px 0;
   }
-} 
+}
+
 @media all and (max-width: 575px) {
   .vehicle-detail .img-section {
     height: 100%;
   }
+
   .vehicle-detail .img-section img {
     width: 80%;
   }
+
   .vehicle-detail .description-section {
     margin: 10px;
   }
+
   .vehicle-detail .description h2 {
     font-size: 40px;
   }
+
   .vehicle-detail .price {
     font-size: 27px;
   }
+
   .vehicle-detail .payment .code-section {
     margin: 0;
     margin-bottom: 10px;
   }
 }
+
 @media all and (max-width: 450px) {
   .vehicle-detail .container {
     padding: 0 25px !important;
   }
+
   .vehicle-detail .payment .description-section {
     margin: 0;
     padding-left: 10px;
   }
+
   .vehicle-detail .data-item {
     flex-direction: column !important;
   }
+
   .vehicle-detail .payment .first-col,
   .vehicle-detail .payment .second-col {
     width: 100%;
