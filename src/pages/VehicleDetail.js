@@ -1,9 +1,9 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../assets/css/vehicle-detail.css'
 import {BiMinus, BiPlus} from 'react-icons/bi'
 import {GrFormPrevious, GrFormNext} from 'react-icons/gr'
 import {IoChevronBack} from 'react-icons/io5'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import {default as axios} from 'axios';
 import noImage from '../assets/images/vehicle-type/no-image.jpg'
 
@@ -13,6 +13,8 @@ export default function VehicleDetail() {
   const [vehicle, setVehilcle] = useState({})
   const [price, setPrice] = useState(0)
   const [count, setCount] = useState(1)
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     getVehicle()
@@ -34,8 +36,9 @@ export default function VehicleDetail() {
       setCount(count - 1)
     }
   }
-  const priceFormat = () => {
-    const res = price.reverse()
+
+  const toReservation = () => {
+    navigate(`/reservation/${id}`)
   }
 
   return (
@@ -47,7 +50,7 @@ export default function VehicleDetail() {
             <span>Back</span>
           </Link>
           <div className="col-12 col-lg-6 img-section">
-            <div className="cover-image overflow-hidden">
+            <div className="cover-image overflow-hidden text-center">
               <img src={vehicle.image || noImage} alt={vehicle.brand} className='img-fluid'/>
             </div>
             <div className="row carousel d-flex align-items-center mt-4">
@@ -111,7 +114,7 @@ export default function VehicleDetail() {
             <a href="#" className="btn btn-black">Chat Admin</a>
           </div>
           <div className="col-12 col-md text-center btn-reservation">
-            <a href="/reservation.html" className="btn btn-green">Reservation</a>
+            <button onClick={toReservation} className="btn btn-green">Reservation</button>
           </div>
           <div className="col-12 col-md-3 text-end">
             <button className="btn btn-black">
