@@ -88,11 +88,12 @@ import ForgotPassword from "./pages/ForgotPassword";
 import VehicleType from "./pages/VehicleType";
 import VehiclePopular from "./pages/VehiclePopular";
 import VehicleDetail from "./pages/VehicleDetail";
-import ListItem from './pages/ListItem'
-import Features from './pages/Features'
-import Pricing from './pages/Pricing'
-import DetailItem from './pages/DetailItem'
+import ListItem from './pages/ListItem';
+import Features from './pages/Features';
+import Pricing from './pages/Pricing';
 import CharacterList from './pages/CharacterList'
+import VehicleMore from "./pages/VehicleMore";
+import Reservation from "./pages/Reservation";
 
 export default class App extends Component {
   state = {
@@ -120,12 +121,21 @@ export default class App extends Component {
           <Route path="vehicle-type" element={
             <Layout isLogin={isLogged}><VehicleType /></Layout>
           } />
-          <Route path="vehicle/popular" element={
-            <Layout isLogin={isLogged} vehiclePopular={true}><VehiclePopular /></Layout>
+          <Route path={`vehicle`} element={
+            <Layout isLogin={isLogged} vehicleMore={true}><VehicleMore /></Layout>
           } />
           <Route path="vehicle/:id" element={
             <Layout isLogin={isLogged}><VehicleDetail /></Layout>
           } />
+          <Route path="reservation/:id" element={
+            <Layout isLogin={isLogged}><Reservation /></Layout>
+          } />
+          <Route path="vehicle/popular" element={
+            <Layout isLogin={isLogged} vehiclePopular={true}><VehiclePopular /></Layout>
+          } />
+          {/* <Route path="vehicle/:id" element={
+            <Layout isLogin={isLogged}><VehicleDetail /></Layout>
+          } /> */}
           <Route path='list' element={<ListItem />} />
           {/* <Route path='vehicles' element={<ListItem />} />
           <Route path='vehicles/:id' element={<DetailItem />} /> */}
