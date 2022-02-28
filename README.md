@@ -1,7 +1,12 @@
-# Beginner Frontend Using React Js - GO Rental App
+<p align="center">
+  <a href="" rel="noopener">
+ <a href="https://imgbb.com/"><img src="https://i.ibb.co/8P4m5hB/Icon-Go-Rental.png" alt="Icon-Go-Rental" border="0"></a>
+</p>
 
-The project can be seen at [Netlify](https://vehicle-rent.netlify.app/).
+---
 
+## 🧐 About
+This is the repository fw5-react-frontend
 ## Installation
 
 How To Install the Project:
@@ -28,3 +33,28 @@ How To Running the Project:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+#### Preview Home By Netlify
+<a href="https://ibb.co/2gf5Lyj"><img src="https://i.ibb.co/t8W3N4b/Screenshot-from-2022-02-28-15-50-13.png" alt="Screenshot-from-2022-02-28-15-50-13" border="0"></a>
+
+## ⛏️ Built Using
+
+- [Axios](https://www.npmjs.com/package/axios)
+- [Bootstrap 5](https://www.npmjs.com/package/bootstrap)
+- [React-Icons](https://www.npmjs.com/package/react-icons)
+- [React-Router-Dom](https://www.npmjs.com/package/router-dom)
+- [History](https://www.npmjs.com/package/history)
+## 💻 Backend & Responsive Web
+
+Repo Backend : https://github.com/asherginting/fw5-backend-beginner
+<br>
+Repo Responsive Web : https://github.com/asherginting/fw5-responsive-website
+
+## 💻 Live Demo
+
+[Netlify](https://vehicle-rent.netlify.app/) <br>
+[Heroku](https://vehiclerentapp.herokuapp.com/)
+
+## ✍️ Authors
+
+- [@asherginting](https://github.com/asherginting)
