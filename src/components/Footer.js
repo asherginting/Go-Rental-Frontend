@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../assets/css/footer.css'
 import logo from '../assets/images/home/Go-Rental x100.png'
 import {FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube} from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 export default class Footer extends Component {
   render() {
@@ -9,7 +10,9 @@ export default class Footer extends Component {
         <footer class="container">
         <div class="row">
           <div class="col-lg-5">
+          <Link to='/'>
             <img src={logo} alt="logo" />
+          </Link>  
             <p class="description">Plan and book your perfect trip with expert advice, travel tips for vehicle information
               from us</p>
             <p>© 2022 - GO Rental. All rights reserved</p>
