@@ -11,11 +11,19 @@ export default function VehicleMore() {
   const [searchParams] = useSearchParams()
 
   useEffect(() => {
-    const params = searchParams.get('type') || searchParams.get('search')
+    window.scrollTo(0, 0)
+    // const params = searchParams.get('type') ? {type: searchParams.get('type')} 
+    // : {search: searchParams.get('search') || '', filter: searchParams.get('filter') || ''}
+    const params = searchParams.get('type')
     getVehicle(params)
   }, [searchParams])
 
   const getVehicle = async (params) => {
+    // const url = params.type || params.search ?
+    // (params.type ? 
+    //   `http://localhost:5000/popular?limit=8&search=${params.type}` 
+    //   : `http://localhost:5000/vehicles/category/?search=${params.search}&filter=${params.filter}&limit=8`) 
+    // : 'http://localhost:5000/popular?limit=8'
     const url = params ? `http://localhost:5000/popular?limit=8&search=${params}` : 'http://localhost:5000/popular?limit=8'
     const {data} = await axios.get(url)
     setVehilcle(data.results) 
@@ -33,7 +41,8 @@ export default function VehicleMore() {
       <section className='container'>
         <div className="head">
           <h2>{searchParams.get('type') || searchParams.get('search') || 'Popular in town'}</h2>
-          <p className="text-muted text-center">Click item to see details and reservation</p>
+          {vehicle.length > 0 ? <p className="text-muted text-center">Click item to see details and reservation</p> 
+          : <p className="text-center text-muted py-5">Your search '{searchParams.get('search')}' did not match any document</p>}
         </div>
         <div className='row'>
           {vehicle.map(data => {
@@ -42,9 +51,11 @@ export default function VehicleMore() {
           })}
         </div>
         <div className='my-4 text-center'>
-          {page.next ?
-            <button onClick={nextPage} className='btn btn-primary w-50'>Load More</button> :
-            <p className="text-center text-muted py-5">There is no vehicle left</p>    
+          {vehicle.length > 0 ?
+          (page.next ?
+            <button onClick={nextPage} className='btn btn-green w-25'>Next</button> :
+            <p className="text-center text-muted py-5">There is no vehicle left</p>   
+          ) : <></>
           }
         </div>
         

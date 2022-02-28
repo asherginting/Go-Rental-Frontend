@@ -25,6 +25,7 @@ export default class ForgotPassword extends Component {
         </div>
       </header>
       </div>
+      
     )
   }
 }

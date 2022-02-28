@@ -3,7 +3,8 @@ import '../assets/css/vehicle-detail.css'
 import {BiMinus, BiPlus} from 'react-icons/bi'
 import {GrFormPrevious, GrFormNext} from 'react-icons/gr'
 import {IoChevronBack} from 'react-icons/io5'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import {IoMdHeart} from 'react-icons/io'
+import { useNavigate, useParams } from 'react-router-dom'
 import {default as axios} from 'axios';
 import noImage from '../assets/images/vehicle-type/no-image.jpg'
 
@@ -11,44 +12,49 @@ export default function VehicleDetail() {
   const {id} = useParams()
 
   const [vehicle, setVehilcle] = useState({})
+  const [defaultPrice, setDefaultPrice] = useState(0)
   const [price, setPrice] = useState(0)
   const [count, setCount] = useState(1)
 
   const navigate = useNavigate()
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     getVehicle()
   },[])
 
   const getVehicle = async () => {
     const {data} = await axios.get(`http://localhost:5000/vehicles/${id}`)
     setVehilcle(data.results)
+    setDefaultPrice(data.results.price)
     setPrice(data.results.price)
   }
   
   const countPlus = () => {
-    setPrice(price * 2)
+    setPrice(defaultPrice + price )
     setCount(count + 1)
   }
   const countMinus = () => {
     if(count > 1) {
-      setPrice(price / 2)
+      setPrice(price - defaultPrice)
       setCount(count - 1)
     }
   }
-
+  const backNavigate = () => {
+    window.history.back()
+  }
   const toReservation = () => {
-    navigate(`/reservation/${id}`)
+    navigate(`/reservation/${id}/${count}`)
   }
 
   return (
-    <div className='vehicle-detail mt-5'>
+    <div className='vehicle-detail my-5'>
       <section className='container first-container'>
         <div className="row pt-5 detail-vehicle">
-          <Link to='/vehicle/popular' className="back my-4 fw-bold fs-5">
+          <div onClick={backNavigate} className="back my-4 fw-bold fs-5">
             <IoChevronBack className='me-5'/>
             <span>Back</span>
-          </Link>
+          </div>
           <div className="col-12 col-lg-6 img-section">
             <div className="cover-image overflow-hidden text-center">
               <img src={vehicle.image || noImage} alt={vehicle.brand} className='img-fluid'/>
@@ -56,17 +62,15 @@ export default function VehicleDetail() {
             <div className="row carousel d-flex align-items-center mt-4">
               <button className="col-1 btn" aria-label="previous button">
                 <GrFormPrevious className='prev' />
-                <i className="fa-solid fa-angle-left prev"></i>
               </button>
               <div className="col-5 overflow-hidden rounded">
-                <img src="../assets/images/fixie-detail.png" alt="fixie" className="rounded" />
+                <img src={vehicle.image || noImage} alt={vehicle.brand} className="rounded img-fluid" />
               </div>
               <div className="col-5 overflow-hidden rounded">
-                <img src="../assets/images/fixie-detail.png" alt="fixie" className="rounded" />
+                <img src={vehicle.image || noImage} alt={vehicle.brand} className="rounded" />
               </div>
               <button className="col-1 btn" aria-label="next button">
                 <GrFormNext className='next' />
-                <i className="fa-solid fa-angle-right next"></i>
               </button>
             </div>
           </div>
@@ -77,7 +81,7 @@ export default function VehicleDetail() {
             </div>
             <div className="status my-3 d-flex flex-column">
               <span className="text-success fw-bold my-2">{vehicle.status}</span>
-              <span className="text-danger">No prepayment</span>
+              <span className="text-danger">{vehicle.payment || 'No prepayment'}</span>
             </div>
             <div className="mt-4">
               Capacity: {vehicle.capacity} Person
@@ -111,15 +115,15 @@ export default function VehicleDetail() {
       <section className="container form-section mt-5">
         <form className="row">
           <div className="col-12 col-md">
-            <a href="#" className="btn btn-black">Chat Admin</a>
+            <button className="btn btn-black">Chat Admin</button>
           </div>
           <div className="col-12 col-md text-center btn-reservation">
             <button onClick={toReservation} className="btn btn-green">Reservation</button>
           </div>
           <div className="col-12 col-md-3 text-end">
             <button className="btn btn-black">
-              <i className="fa-solid fa-heart"></i>
-              Like
+              <IoMdHeart />
+              <span className='ps-2'>Like</span>
             </button>
           </div>
         </form>
