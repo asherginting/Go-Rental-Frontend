@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import NavList from './NavList'
 import '../../assets/css/nav-before.css'
 import logo from "../../assets/images/login/Go-Rental x100.png"
+import { Link } from 'react-router-dom'
 
 export default class NavBeforeLogin extends Component {
   render() {
@@ -20,8 +21,8 @@ export default class NavBeforeLogin extends Component {
               <div className="collapse navbar-collapse main-nav" id="navbarNav">
                 <NavList />
                 <div className="button-section ms-lg-5">
-                  <a href="../pages/Login" className="me-lg-4 btn btn-outline">Login</a>
-                  <a href="signup.html" className="btn btn-green">Register</a>
+                  <Link className='me-lg-4 btn btn-outline' to='/login'>Login</Link>
+                  <Link className='btn btn-green' to='/signup'>Register</Link>
                 </div>
               </div>
             </div>
