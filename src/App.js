@@ -1,83 +1,3 @@
-// import logo from './logo.svg';
-// import './App.css';
-// import Button from './components/Button'
-// import React from 'react'
-
-// function App() {
-//   const [toggle, setToggle] = React.useState(true)
-  
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           {toggle && <Button sapa = "Hello" />}
-//           <button onClick={()=>setToggle(false)}>Hide </button>
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-// import React, { Component } from 'react'
-// import Homepage from './pages/Homepage'
-
-// export default class App extends Component {
-//   render() {
-//     return (
-//       <Homepage />
-//     )
-//   }
-// }
-
-
-// import React, { Component } from 'react'
-
-// export default class App extends Component {
-//   state = {
-//     count: 0
-//   }
-//   increment = ()=> {
-//     this.setState({
-//       count: this.state.count + 1
-//     })
-//   }
-
-//   decrement = ()=> {
-//     this.setState({
-//       count: this.state.count - 1
-//     })
-//   }
-
-//   render() {
-//     return (
-//       <div className='d-flex vh-100 justify-content-center align-items-center'>
-//         <div className='row'>
-//           <div className='col'>
-//             <button onClick={this.decrement} className='btn btn-primary'>-</button>
-//           </div>  
-//           <div className='col'>
-//             <h1> {this.state.count}</h1>
-//           </div>
-//           <div className='col'>
-//           <button onClick={this.increment} className='btn btn-primary'>+</button>
-//           </div> 
-//         </div>
-//       </div>   
-//     )
-//   }
-// }
-
 import React, { Component } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
@@ -86,18 +6,18 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
 import VehicleType from "./pages/VehicleType";
-import VehiclePopular from "./pages/VehiclePopular";
-import VehicleDetail from "./pages/VehicleDetail";
-import ListItem from './pages/ListItem';
-import Features from './pages/Features';
-import Pricing from './pages/Pricing';
-import CharacterList from './pages/CharacterList'
 import VehicleMore from "./pages/VehicleMore";
+import VehicleDetail from "./pages/VehicleDetail";
 import Reservation from "./pages/Reservation";
+import History from "./pages/History";
+import Payment from "./pages/Payment";
+import Profile from "./pages/Profile";
+import Search from "./pages/Search";
 
 export default class App extends Component {
   state = {
-    isLogged: true
+    isLogged: true,
+    moreDetail: ''
   }
 
   render() {
@@ -127,30 +47,25 @@ export default class App extends Component {
           <Route path="vehicle/:id" element={
             <Layout isLogin={isLogged}><VehicleDetail /></Layout>
           } />
-          <Route path="reservation/:id" element={
+          <Route path="reservation/:id/:qty" element={
             <Layout isLogin={isLogged}><Reservation /></Layout>
           } />
-          <Route path="vehicle/popular" element={
-            <Layout isLogin={isLogged} vehiclePopular={true}><VehiclePopular /></Layout>
+          <Route path="payment/:id/:qty/:idHistory" element={
+            <Layout isLogin={isLogged}><Payment /></Layout>
           } />
-          {/* <Route path="vehicle/:id" element={
-            <Layout isLogin={isLogged}><VehicleDetail /></Layout>
-          } /> */}
-          <Route path='list' element={<ListItem />} />
-          {/* <Route path='vehicles' element={<ListItem />} />
-          <Route path='vehicles/:id' element={<DetailItem />} /> */}
-          <Route path='features' element={<Features />} />
-          <Route path='pricing' element={<Pricing />} />
-          <Route path='characters' element={<CharacterList />} />
+          <Route path="history" element={
+            <Layout isLogin={isLogged}><History /></Layout>
+          } />
+          <Route path="profile/:idUser" element={
+            <Layout isLogin={isLogged}><Profile /></Layout>
+          } />
+          <Route path={`search`} element={
+            <Layout isLogin={isLogged}><Search /></Layout>
+          } />
         </Routes>
-        {/* <VehiclePopular /> */}
-        {/* <VehicleType /> */}
-        {/* <ForgotPassword /> */}
-        {/* <Signup /> */}
         {/* {!this.state.isLogged && <Login isLogin={(value) => this.setState({isLogged: value})} />} */}
         {/* {this.state.isLogged ? (<> <NavAfterLogin />  <Home /></>) : (<> <NavBeforeLogin /> <Home /> </>)} */}
       </BrowserRouter>
     )
   }
 }
-
