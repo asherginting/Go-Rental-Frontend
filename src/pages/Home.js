@@ -74,7 +74,7 @@ const Home = () => {
                 </label>
               </div>
             </div>
-            <button className="btn btn-green" aria-label="explore">Explore</button>
+            <button className="btn btn-blue" aria-label="explore">Explore</button>
           </form>
         </div>
       </div>

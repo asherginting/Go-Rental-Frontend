@@ -27,7 +27,7 @@ export default class App extends Component {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={
-            <Layout isLogin={isLogged}><Home /></Layout>
+            <Layout ><Home /></Layout>
           } />
           <Route path="login" element={
             <Layout noNavbar={true}><Login /></Layout>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../assets/css/forgot-password.css'
 import {IoChevronBack} from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 
 export default class ForgotPassword extends Component {
   render() {
@@ -9,10 +10,10 @@ export default class ForgotPassword extends Component {
       <header>
         <div className="opacity">
           <div className="container">
-            <a className="back" href="/login.html">
+          <Link className='back' to='/login'> 
               <IoChevronBack />
               <span>Back</span>
-            </a>
+          </Link>
             <h1 className="text-center">Don`t worry, we got your back!</h1>
             <p className="text-center">You will receive a link to reset your password. <br />
               If you haven`t received any link, click resend link</p>
