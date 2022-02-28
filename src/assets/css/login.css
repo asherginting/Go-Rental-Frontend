@@ -2,7 +2,7 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-header.login {
+header.login.register {
   background-image: url(../images/login/header-login.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,16 +14,16 @@ header.login .opacity {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-header .desc {
+header.login .desc {
   border-right: 1px solid white;
   margin-top: 107px;
 }
 
-header .form-login {
+header.login .form-register {
   margin-top: 107px;
 }
 
-header h1 {
+header.login h1 {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   font-size: 64px;
@@ -31,7 +31,7 @@ header h1 {
   margin-bottom: 93px;
 }
 
-header .opacity .text {
+header.login .opacity .dont-have {
   font-weight: bold;
   font-size: 24px;
   line-height: 33px;
@@ -39,7 +39,7 @@ header .opacity .text {
   color: #fff;
 }
 
-header .btn-signup {
+header.login .btn-signup {
   margin-top: 25px;
   padding: 23px 149px;
   background-color: #151b1b;
@@ -49,33 +49,18 @@ header .btn-signup {
   border-radius: 10px;
 }
 
-header .btn-signup:hover {
+header.login .btn-signup:hover {
   background-color: #0085DF;
-  color: #ffffff;
+  color: #151b1b;
 }
 
-header .btn-login {
-  margin-top: 25px;
-  padding: 23px 149px;
-  background-color: #0085DF;
-  color: #0085DF;
-  font-weight: 900;
-  font-size: 24px;
-  border-radius: 10px;
+.login .form-register {
+  margin-left: 15%;
 }
 
-header .btn-login:hover {
-  background-color: #151b1b;
-  color: #0085DF;
-}
-
-.form-login {
-  margin-left: 20%;
-}
-
-.form-login input,
-.form-login .btn {
-  width: 447px;
+.login .form-register input,
+.form-register .btn {
+  width: 95%;
   padding: 23px 0;
   border-radius: 10px;
   margin: 17px 0;
@@ -83,22 +68,22 @@ header .btn-login:hover {
   font-size: 24px;
 }
 
-.form-login input {
+.login .form-register input {
   padding-left: 20px;
   background: rgba(255, 255, 255, 0.26);
   color: #fff;
   border: none;
 }
 
-.form-login input:focus {
+.login .form-register input:focus {
   outline: none;
 }
 
-.form-login input::placeholder {
+.login .form-register input::placeholder {
   color: #fff;
 }
 
-.form-login a {
+.login .form-register a {
   text-decoration: none;
   color: #fff;
   font-family: 'Mulish', sans-serif;
@@ -107,120 +92,153 @@ header .btn-login:hover {
   margin-bottom: 49px;
 }
 
-.form-login a.forgot {
+.login .form-register a.forgot {
   display: block;
   margin-bottom: 49px;
 }
 
-.form-login .login {
-  color: #fff;
+.login .form-register .login {
+  color: #151b1b;
   background-color: #0085DF;
 }
 
-.form-login .login:hover {
+.login .form-register .login:hover {
   background-color: #EBEFD0;
   color: #085F63;
 }
 
-.form-login .google {
+.login .form-register .google {
   color: black;
   background-color: #fff;
   text-align: center;
 }
 
-.form-login .google:hover {
+.login .form-register .google:hover {
   background-color: #EBEFD0;
   color: #085F63;
 }
 
-.ellipse {
+.login .dot {
   text-align: end;
 }
 
-.ellipse.top {
+.login .dot.top {
   margin-right: -22px;
   margin-top: -3px;
 }
 
-.ellipse.bottom {
+.login .dot.bottom {
   margin-right: -23px;
-  margin-top: 125px;
+  margin-top: 148px;
 }
 
-.ellipse.bottom.signup {
+.login .dot.bottom.signup {
   margin-top: 135px;
 }
 
 @media all and (max-width: 1150px) {
-  .form-login {
+  .login .form-register {
     margin-left: 15%;
   }
 }
 
 @media all and (max-width: 990px) {
-  header h1 {
+  header.login h1 {
     margin-bottom: 15px;
     font-size: 43px;
   }
 
-  .form-login input,
-  .form-login .btn {
-    width: 320px;
+  .login .left-section {
+    width: 80%;
+  }
+
+  .login .reverse-top {
+    width: 100%;
+  }
+
+  .login .form-register input,
+  .form-register .btn {
+    width: 100%;
     padding: 12px 0;
   }
 
-  .form-login input {
+  .login .form-register input {
     padding-left: 10px;
   }
 
-  header .opacity .text {
+  header.login .opacity .dont-have {
     font-size: 15px;
   }
 
-  header .opacity .btn {
-    width: 320px;
+  header.login .opacity .btn {
+    width: 100%;
     padding: 15px 0;
   }
 
-  .ellipse.bottom {
-    margin-top: 138px;
+  header.login .btn-signup {
+    box-shadow: 0px 4px 3px 0px rgba(50, 219, 198, 0.75);
+    -webkit-box-shadow: 0px 4px 3px 0px rgba(50, 219, 198, 0.75);
+    -moz-box-shadow: 0px 4px 3px 0px rgba(50, 219, 198, 0.75);
+  }
+
+  .login .dot.bottom {
+    margin-top: 165px;
   }
 }
 
 @media all and (max-width: 768px) {
-  header .opacity {
+  .login .left-section {
+    margin: auto;
+  }
+
+  header.login h1 {
+    font-size: 35px;
+    margin: auto;
+  }
+
+  header.login .opacity .reverse-top {
+    display: none !important;
+  }
+
+  header.login .opacity .reverse-bottom {
+    display: block !important;
+  }
+
+  header.login .opacity {
     height: 900px;
   }
 
-  header .opacity .row {
+  header.login .opacity .row {
     text-align: center;
   }
 
-  header .desc {
+  header.login .desc {
     border: none;
     margin-top: 20px;
   }
 
-  .ellipse {
+  .login .dot {
     display: none;
   }
 
-  header .form-login {
+  header.login .form-register {
+    margin: auto;
     margin-top: 10px;
     margin-left: 0;
+    font-size: 25px;
   }
 
-  .form-login {
+  .login .form-register {
     display: flex;
     justify-content: center;
   }
 
-  .form-login input,
-  .form-login input:focus {
+  .login .form-register input,
+  .form-register input:focus {
     text-align: center;
   }
 
-  .form-login a.forgot {
+  .login .form-register a.forgot {
     display: inline;
   }
 }

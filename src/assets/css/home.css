@@ -4,15 +4,15 @@ body {
   padding: 0;
 }
 
-.home .btn-green {
+.home .btn-blue {
   width: 120px;
 }
 
-.home .btn-green {
+.home .btn-blue {
   background-color: #0085DF;
 }
 
-.home .btn-green:hover {
+.home .btn-blue:hover {
   background-color: #EBEFD0;
   color: #0085DF;
 }
@@ -205,13 +205,13 @@ main.home section .highlight span {
 
   .navbar-nav,
   .button-section,
-  .btn-green,
+  .btn-blue,
   .btn-outline {
     width: 100%;
   }
 
   nav .btn-outline,
-  nav .btn-green {
+  nav .btn-blue {
     padding: 15px;
   }
 

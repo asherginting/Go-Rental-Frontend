@@ -44,12 +44,12 @@
 
 .signup-page input:focus {
   padding-left: 30px;
-  outline: #32DBC6;
+  outline: #0085DF;
 }
 
 .signup-page .signup {
   color: #fff;
-  background-color: #32DBC6;
+  background-color: #0085DF;
 }
 
 .signup-page .another hr {
@@ -80,7 +80,7 @@
 .signup-page .login:hover,
 .signup-page .signup:hover {
   background-color: #EBEFD0;
-  color: #085F63;
+  color: #0085DF;
 }
 
 .signup-page .login {
