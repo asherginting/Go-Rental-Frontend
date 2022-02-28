@@ -46,17 +46,20 @@ const Home = () => {
               <div className="col-sm-6">
                 <select className="option-form">
                   <option className='d-none'>Location</option>
-                  <option>Jakarta</option>
-                  <option>Bandung</option>
+                  <option>Bali</option>
                   <option>Yogyakarta</option>
-                  <option>Depok</option>
-                  <option>Ngawi</option>
+                  <option>Jakarta</option>
+                  <option>Kalimantan</option>
+                  <option>Malang</option>
                   {/* {[...new Set(dataLocation)].map((data) => <option key={data}>{data}</option>)} */}
                 </select>
               </div>
               <div className="col-sm-6">
                 <select className="option-form">
                   <option className='d-none'>Type</option>
+                  <option>Bike</option>
+                  <option>Cars</option>
+                  <option>Motorbike</option>
                   {category.map((data) => <option key={data.idCategory}>{data.type}</option>)}
                 </select>
               </div>
@@ -64,8 +67,9 @@ const Home = () => {
             <div className="row">
               <div className="col-sm-6">
                 <select className="option-form">
-                  <option>Payment</option>
-                  <option></option>
+                  <option className='d-none'>Payment</option>
+                  <option>Cash</option>
+                  <option>PayLater</option>
                 </select>
               </div>
               <div className="col-sm-6">
