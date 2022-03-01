@@ -69,3 +69,30 @@ export default class App extends Component {
     )
   }
 }
+
+// import React, { Component } from 'react'
+// import { unstable_HistoryRouter as HistoryRouter,BrowserRouter, Route, Routes } from 'react-router-dom'
+// import DetailItem from './pages/DetailItem'
+// import CharacterList from './pages/CharacterList'
+// import CharacterDetail from './pages/CharacterDetail'
+// import { createBrowserHistory } from 'history'
+
+// export default class App extends Component {
+//   componentDidMount(){
+//     console.log(this.props)
+//   }
+//   history = createBrowserHistory()
+//   render() {
+//     return (
+//       <HistoryRouter history={this.history}>
+//         {/* <BrowserRouter> */}
+//           <Routes>
+//             <Route path='characters' element={<CharacterList />} />
+//             <Route path='vehicles/:id' element={<DetailItem />} />
+//             <Route path='characters/:id' element={<CharacterDetail history={this.history} />} />
+//           </Routes>
+//         {/* </BrowserRouter> */}
+//       </HistoryRouter>
+//     )
+//   }
+// }
