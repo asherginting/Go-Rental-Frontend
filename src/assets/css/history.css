@@ -173,17 +173,17 @@ nav form .search-icon:hover {
 .history .vehicle-image2 {
   background-image: url(/assets/images/lambo.png);
 } */
-.history .btn-green {
+.history .btn-blue {
   height: 44px;
   padding: 0 41px;
   text-align: center;
   border-radius: 10px;
   font-weight: bold;
   color: #fff;
-  background-color: #32DBC6;
+  background-color: #0085DF;
 }
 
-.history .btn-green:hover {
+.history .btn-blue:hover {
   background-color: #EBEFD0;
   color: #085F63;
 }
@@ -315,7 +315,7 @@ nav form .search-icon:hover {
     font-size: 25px;
   }
 
-  .history .btn-green {
+  .history .btn-blue {
     height: 35px;
     padding: 0 27px
   }

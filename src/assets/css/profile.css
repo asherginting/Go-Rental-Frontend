@@ -56,7 +56,7 @@ nav .mail-profile img {
   width: 40px;
   height: 40px;
   position: relative;
-  background-color: #32DBC6;
+  background-color: #0085DF;
   border: none;
   border-radius: 50px;
 }
@@ -68,7 +68,7 @@ nav .mail-profile img {
 }
 
 .form-check-input:checked {
-  border-color: #32DBC6 !important;
+  border-color: #0085DF !important;
 }
 
 .form-check-input {
@@ -100,7 +100,7 @@ nav .mail-profile img {
 }
 
 .profile .form-check-input:focus {
-  background-color: #32DBC6;
+  background-color: #0085DF;
 }
 
 .profile section form .form-contact {
@@ -119,7 +119,7 @@ nav .mail-profile img {
 .profile section form .form-contact:focus {
   background-color: rgba(50, 219, 198, 0);
   outline: none;
-  box-shadow: #32DBC6;
+  box-shadow: #0085DF;
 }
 
 .profile section form .form-contact:active {
@@ -150,12 +150,12 @@ nav .mail-profile img {
 
 .profile form .btn-save {
   color: #fff;
-  background-color: #32DBC6;
+  background-color: #0085DF;
 }
 
 .profile form .btn-edit {
   background-color: #151b1b;
-  color: #32DBC6;
+  color: #0085DF;
 }
 
 .profile form .btn-cancel {
