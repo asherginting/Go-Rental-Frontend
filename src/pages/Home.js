@@ -57,9 +57,6 @@ const Home = () => {
               <div className="col-sm-6">
                 <select className="option-form">
                   <option className='d-none'>Type</option>
-                  <option>Bike</option>
-                  <option>Cars</option>
-                  <option>Motorbike</option>
                   {category.map((data) => <option key={data.idCategory}>{data.type}</option>)}
                 </select>
               </div>

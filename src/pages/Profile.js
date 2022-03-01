@@ -3,13 +3,16 @@ import '../assets/css/profile.css'
 import {default as axios} from 'axios'
 import { useParams} from 'react-router-dom'
 import {BsFillPenFill} from 'react-icons/bs'
+import deleteActiveNav from '../helpers/deleteActiveNav'
 
 export default function Profile() {
   const [user, setUser] = useState([])
   const {idUser} = useParams()
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     getUser()
+    deleteActiveNav()
   }, [])
 
   const getUser = async () => {
@@ -53,7 +56,7 @@ export default function Profile() {
               <input className="form-control form-contact" type="email" defaultValue={email} />
             </div>
             <div className="col mt-4">
-              <label>Adress:</label>
+              <label>Address:</label>
               <textarea className="form-control form-contact" defaultValue={address} />
             </div>
             <div className="col mt-4"> 

@@ -3,6 +3,7 @@ import '../assets/css/vehicle-detail.css'
 import {default as axios} from 'axios'
 import { useParams } from 'react-router-dom'
 import {IoChevronBack} from 'react-icons/io5'
+import activeNav from '../helpers/activeNav'
 
 export default function Payment() {
   const [vehicle, setVehilcle] = useState({})
@@ -10,6 +11,7 @@ export default function Payment() {
   useEffect(() => {
     window.scrollTo(0, 0)
     getVehicle()
+    activeNav()
   }, [])
 
   const {id, qty} = useParams()
@@ -130,8 +132,8 @@ export default function Payment() {
           <div className="col-12 col-sm-auto">
             <select className="form-select">
               <option className="d-none">Select payment method</option>
-              <option>ATM</option>
-              <option>Gopay</option>
+              <option>Cash</option>
+              <option>Transfer</option>
             </select>
           </div>
         </div>

@@ -53,7 +53,7 @@ export default function VehicleMore() {
         <div className='my-4 text-center'>
           {vehicle.length > 0 ?
           (page.next ?
-            <button onClick={nextPage} className='btn btn-green w-25'>Next</button> :
+            <button onClick={nextPage} className='btn btn-primary w-25'>Load More</button> :
             <p className="text-center text-muted py-5">There is no vehicle left</p>   
           ) : <></>
           }

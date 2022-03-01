@@ -39,7 +39,7 @@ export default function History() {
           </div> 
         </div>
         <div className="btn-delete d-none">
-          <button className="btn btn-green">Delete</button>
+          <button className="btn btn-blue">Delete</button>
         </div>
       </div>
     )
