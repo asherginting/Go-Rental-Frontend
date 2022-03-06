@@ -49,6 +49,7 @@ header.home .opacity .line {
 }
 
 header.home .option-form {
+  padding: 10px;
   width: 220px;
   height: 52px;
   margin: 35px 0;
