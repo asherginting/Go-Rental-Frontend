@@ -8,31 +8,26 @@ body {
   padding: 0;
 }
 
-.vehicle-detail nav {
+/* .vehicle-detail nav {
   height: 150px;
 }
-
 .vehicle-detail nav .navigation {
   font-size: 1rem;
   padding: 0 65px;
   display: flex;
   justify-content: flex-end;
 }
-
 .vehicle-detail nav .navbar-collapse {
   padding-right: 0;
 }
-
 .vehicle-detail nav .mail-profile img {
   width: 54.62px;
 }
-
 .vehicle-detail .message {
   text-decoration: none;
 }
-
 .vehicle-detail .total-message {
-  background-color: #0085DF;
+  background-color: #49BEB7;
   position: relative;
   top: -18px;
   margin-right: -18px;
@@ -40,15 +35,13 @@ body {
   font-size: 15px;
   font-weight: bold;
 }
-
 .vehicle-detail .icon-message {
   font-size: 55px;
-  color: #0085DF;
+  color: #0d9299;
 }
-
 .vehicle-detail .profile img {
   border-radius: 30px;
-}
+} */
 
 /* button */
 .vehicle-detail .btn:focus {
@@ -84,6 +77,7 @@ body {
 /* section */
 .vehicle-detail section {
   margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 .vehicle-detail .first-section {
@@ -91,6 +85,7 @@ body {
 }
 
 .vehicle-detail .back {
+  cursor: pointer;
   text-decoration: none;
   color: black;
 }
@@ -118,6 +113,7 @@ body {
 .vehicle-detail img,
 .vehicle-detail .cover-image {
   border-radius: 10px;
+  max-height: 310px;
 }
 
 .vehicle-detail .description-section {
@@ -142,6 +138,12 @@ body {
   font-size: 36px;
 }
 
+.vehicle-detail .carousel button,
+.vehicle-detail .carousel button {
+  display: flex !important;
+  padding: 0;
+}
+
 .vehicle-detail .prev,
 .vehicle-detail .next,
 .vehicle-detail .plus,
@@ -152,11 +154,11 @@ body {
 }
 
 .vehicle-detail .carousel img {
-  width: 100%;
+  max-height: 154px;
 }
 
 .vehicle-detail .total-day {
-  margin-top: 20%;
+  margin: 13% 0;
 }
 
 .vehicle-detail .plus,
@@ -226,6 +228,23 @@ body {
   border: none;
 }
 
+.vehicle-detail .dropdown-toggle {
+  color: gray;
+  padding: 20px 19px !important;
+  background-color: rgba(159, 163, 161, 0.1);
+  border: none;
+  width: 100%;
+  text-align: start;
+}
+
+.vehicle-detail .dropdown-toggle::after {
+  margin-left: 15.255em;
+}
+
+.vehicle-detail .reservation input.form-control {
+  padding-right: 20px;
+}
+
 .vehicle-detail .reservation input.form-control,
 .vehicle-detail .reservation select.form-select {
   padding-left: 20px;
@@ -255,8 +274,8 @@ body {
 
 .vehicle-detail .payment .img-section img {
   position: absolute;
-  width: auto;
-  height: 100%;
+  /* width: auto;
+  height: 100%; */
 }
 
 .vehicle-detail .payment .code {
@@ -266,7 +285,7 @@ body {
 }
 
 .vehicle-detail .payment .description-section {
-  padding-left: 0;
+  padding-left: 30px;
 }
 
 .vehicle-detail .payment .rent-data {
@@ -274,7 +293,7 @@ body {
 }
 
 .vehicle-detail .payment .first-col {
-  width: 30.5%;
+  width: 35.5%;
   margin: 10px 0;
   margin-right: 31px;
 }
@@ -337,40 +356,39 @@ body {
   .vehicle-detail .payment .first-col {
     width: 51.5%;
   }
+
+  .vehicle-detail .dropdown-toggle::after {
+    margin-left: 10.255em;
+  }
 }
 
 @media all and (max-width: 991px) {
-  .vehicle-detail nav {
+
+  /* .vehicle-detail nav {
     height: 95px;
   }
-
   .vehicle-detail nav .navigation#navbarNav {
     align-items: flex-end;
     flex-direction: column;
     margin: 20px 0;
     padding: 0;
   }
-
   .vehicle-detail .navbar-nav,
   .vehicle-detail .mail-profile {
     width: 100%;
   }
-
   .vehicle-detail .mail-profile {
     flex-direction: column;
     align-items: start !important;
   }
-
   .vehicle-detail .mail-profile a {
     width: 100%;
   }
-
   .vehicle-detail nav form {
     margin: 20px 0;
-  }
-
+  } */
   .vehicle-detail .reservation .img-section img {
-    width: 100%;
+    /* width: 100%; */
     height: auto;
   }
 
@@ -395,10 +413,16 @@ body {
     width: 100%;
   }
 
+  .vehicle-detail .dropdown-toggle::after {
+    margin-left: 30.255em;
+  }
+
   /* payment */
   .vehicle-detail .payment .description-section {
     width: auto;
-    margin-top: 0;
+    margin-top: 0 !important;
+    margin-left: 23px;
+    padding: 0 10px;
   }
 
   .vehicle-detail .payment .img-section {
@@ -418,6 +442,10 @@ body {
   .vehicle-detail .payment .copy-contain .btn,
   .vehicle-detail .pay-now .btn {
     font-size: 17px;
+  }
+
+  .vehicle-detail .payment .btn-copy-top {
+    width: 100%;
   }
 
   .vehicle-detail .payment .order-details,
@@ -442,6 +470,10 @@ body {
     margin-bottom: 45px;
   }
 
+  .vehicle-detail .reservation .back {
+    font-size: 20px;
+  }
+
   .vehicle-detail .total-day {
     margin: auto;
     padding-left: 0;
@@ -463,6 +495,10 @@ body {
     width: 100%;
   }
 
+  .vehicle-detail .dropdown-toggle::after {
+    margin-left: 19.255em;
+  }
+
   /* payment */
   .vehicle-detail .payment .detail-vehicle {
     padding-top: 0 !important;
@@ -474,8 +510,8 @@ body {
   }
 
   .vehicle-detail .payment .img-section img {
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
   }
 
   .vehicle-detail .payment .description h2 {
@@ -486,7 +522,7 @@ body {
   .vehicle-detail .payment .code,
   .vehicle-detail .payment .copy-contain .btn,
   .vehicle-detail .pay-now .btn {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .vehicle-detail .payment .description p,
@@ -529,9 +565,9 @@ body {
   }
 
   .vehicle-detail .btn-copy {
-    padding: 3px;
+    padding: 9px;
     font-size: 11px;
-    width: 28%;
+    width: 45%;
   }
 
   .vehicle-detail .payment .payment-code,
@@ -554,11 +590,28 @@ body {
   }
 
   .vehicle-detail .img-section img {
-    width: 80%;
+    /* width: 80%; */
+  }
+
+  .vehicle-detail .payment .btn-copy-top {
+    margin-top: 15px;
+  }
+
+  .vehicle-detail .payment .description-section {
+    margin-left: 5px;
   }
 
   .vehicle-detail .description-section {
     margin: 10px;
+  }
+
+  .vehicle-detail .reservation .description-section {
+    margin: 0;
+  }
+
+  .vehicle-detail .btn-copy-top {
+    padding: 12px !important;
+    width: 200%;
   }
 
   .vehicle-detail .description h2 {
@@ -567,6 +620,10 @@ body {
 
   .vehicle-detail .price {
     font-size: 27px;
+  }
+
+  .vehicle-detail .dropdown-toggle::after {
+    margin-left: 1.255em;
   }
 
   .vehicle-detail .payment .code-section {

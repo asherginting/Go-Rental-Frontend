@@ -1,28 +1,45 @@
 import React, { useEffect, useState } from 'react'
 import '../assets/css/history.css'
 import {default as axios} from 'axios'
-import noImage from '../assets/images/vehicle-type/no-image.jpg'
+import noImage from '../assets/images/no-image.jpg'
+import { Link } from 'react-router-dom'
+import deleteActiveNav from '../helper/deleteActiveNav'
+import {GoSearch} from 'react-icons/go'
+import {BsChevronDown, BsChevronRight} from 'react-icons/bs'
 
 export default function History() {
   const [history, setHistory] = useState([])
+  const [newVehicle, setNewVehicle] = useState([])
+  const [page, setPage] = useState([])
   
   useEffect(() => {
+    window.scrollTo(0, 0)
     getHistory()
+    getNewVehicle()
+    deleteActiveNav()
   }, [])
 
   const getHistory = async (key) => {
-    const url = key ? `http://localhost:5000/histories/?search=${key}&limit=8` : `http://localhost:5000/histories/?limit=8`
+    const url = key ? `http://localhost:5000/histories/?search=${key}&limit=3` : `http://localhost:5000/histories/?limit=3`
     const {data} = await axios.get(url)
     setHistory(data.results)
-    console.log(data.results.length)
+    setPage(data.pageInfo)
+  }
+  const getNewVehicle = async () => {
+    const {data} = await axios.get(`http://localhost:5000/vehicles/new`)
+    setNewVehicle(data.results)
+  }
+  const nextPage = async () => {
+    const {data} = await axios.get(page.next)
+    setHistory([...history, ...data.results])
+    setPage(data.pageInfo)
   }
 
   const bgImage = (props) => {
-    const {image, brand, prepayment, status} = props
+    const {image, brand, prepayment, status, idHistory} = props
     const bgImg = image || noImage
-    console.log(bgImg)
     return (
-      <div className="d-flex align-items-center history-contain">
+      <div className="d-flex align-items-center history-contain" key={idHistory}>
         <div className="row history-data">
           <div className="col-3">
             <div className="vehicle-image1" style={{backgroundImage: `url(${bgImg})`}} ></div>
@@ -39,7 +56,7 @@ export default function History() {
           </div> 
         </div>
         <div className="btn-delete d-none">
-          <button className="btn btn-blue">Delete</button>
+          <button className="btn btn-green">Delete</button>
         </div>
       </div>
     )
@@ -50,16 +67,17 @@ export default function History() {
       <main className="row main-section">
         <section className="col-12 col-md -8 ps-5">
           <div className="row container form-section">
-            <div className="col-12 col-sm-9 search-bar">
-              <form className="container d-flex position-relative">
-                <input className="form-control" type="search" placeholder="Search history" />
+            <div className="col-12 col-md-9 search-bar">
+              <form className=" d-flex position-relative">
+                <input name='keyword' className="form-control" type="search" placeholder="Search history" />
                 <button type="submit" className="btn position-absolute end-0">
+                  <GoSearch className='icon-search' />
                   <i className="fa-solid fa-magnifying-glass search-icon"></i>
                 </button>
               </form>       
             </div>
-            <div className="container col-4 col-sm-3 filter">
-              <select className="form-select select-bar">
+            <div className="container col-12 col-md-3 filter">
+              <select id='filer' className="form-select select-bar">
                 <option className="d-none disabled">Filter</option>
                 <option value="type">Type</option>
                 <option value="data-added">Data Added</option>
@@ -85,6 +103,7 @@ export default function History() {
               const props = {idHistory: data.idHistory, idUser: data.idUser, name: data.name, image: data.image, brand: data.brand, prepayment: data.prepayment, status: data.status }
               return bgImage(props)
             })}
+            <button onClick={nextPage} className='btn btn-green w-50 mt-5'>Load More</button>
           </div>
         </section>
       
@@ -92,30 +111,25 @@ export default function History() {
           <div className="border  text-center">
             <h5 className="fw-bold">New Arrival</h5>
             <div className="main-aside">
-              <div className="new-arival">
-                <a href="#">
-                  <div className="bg-vehicle-1"></div>
-                  <div className="highlight">
-                    <h6 className="fw-bold">Lamborghini</h6>
-                    <span className="text-muted">South Jakarta</span>
-                  </div>
-                </a>
-              </div>
-              <div className="new-arival">
-                <a href="#">
-                  <div className="bg-vehicle-2"></div>
-                  <div className="highlight">
-                    <h6 className="fw-bold">White Jeep</h6>
-                    <span className="text-muted">Kalimantan</span>
-                  </div>
-                </a>
-              </div>
+              {newVehicle.map((data, index) => {
+                return (
+                <div className="new-arival" key={index}>
+                  <Link to={`/vehicle/${data.idVehicle}`}>
+                    <div className="bg-vehicle-1"style={{backgroundImage: `url(${data.image || noImage})`}}></div>
+                    <div className="highlight">
+                      <h6 className="fw-bold">{data.brand}</h6>
+                      <span className="text-muted">{data.location}</span>
+                    </div>
+                  </Link>
+                </div>
+                )
+              })}
             </div>
             <div className="view-more">
               <a href="#">
                 <div className="text-muted">View more</div>
-                <div className="arrow-down"><i className="fa-solid fa-angle-down"></i></div>
-                <div className="arrow-next d-none"><i className="fa-solid fa-angle-right"></i></div>
+                <div className="arrow-down"><BsChevronDown /></div>
+                <div className="arrow-next d-none"><BsChevronRight /></div>
               </a>
             </div>
           </div>

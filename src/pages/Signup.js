@@ -1,11 +1,15 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react'
 import '../assets/css/signup.css'
-import google from '../assets/images/login/google.png'
-import logo from '../assets/images/login/Go-Rental x100.png'
+import google from '../assets/images/google.png'
+import logo from '../assets/images/Go-Rental x100.png'
 import {FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 export default class Signup extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     return (
       <main className="row signup-page">
@@ -18,23 +22,21 @@ export default class Signup extends Component {
               <input type="text" placeholder="Name" />
               <input type="email" placeholder="Email" />
               <input type="password" placeholder="Password" />
-              <Link className='btn mt-5 signup' to='#'>Sign Up</Link>
+              <a href="/login.html" className="btn mt-5 signup">Sign Up</a>
               <div className="row d-flex align-items-center another">
                 <div className="col"><hr /></div>
                 <div className="col-5 text-muted text-center text-another">or try another way</div>
                 <div className="col"><hr /></div>
               </div>
               <a href="#" className="btn my-5 google"><img src={google} alt="google" /> Sign Up With Google</a>
-              <Link className='btn login' to='/login'>Login</Link> <br/>
+              <Link to='/login' className="btn login">Login</Link> <br />
             </form>
       
             <footer className="bg-light container pt-5">
               <div>
-              <Link to='/'>
-                <img src={logo} alt="logo" width="20px" />
-              </Link>
+                <Link to='/'><img src={logo} alt="logo" width="20px" /></Link>
                 <p className="description">Plan and book your perfect trip with expert advice, travel tips for vehicle information from us</p>
-                <p>©2020 Vehicle Rental Center. All rights reserved</p>
+                <p>© 2022 - GO Rental. All rights reserved</p>
               </div>
               <div className="row social">
                 <ul className="list-group">

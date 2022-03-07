@@ -5,46 +5,41 @@ import {GrFormPrevious, GrFormNext} from 'react-icons/gr'
 import {IoChevronBack} from 'react-icons/io5'
 import {IoMdHeart} from 'react-icons/io'
 import { useNavigate, useParams } from 'react-router-dom'
-import {default as axios} from 'axios';
-import noImage from '../assets/images/vehicle-type/no-image.jpg'
+import noImage from '../assets/images/no-image.jpg'
+import activeNav from '../helper/activeNav'
+import { useDispatch, useSelector } from 'react-redux'
+import { getVehicleDetail } from '../redux/actions/vehicle'
+import { empty, increment, decrement } from '../redux/actions/counter'
 
-export default function VehicleDetail() {
+function VehicleDetail() {
   const {id} = useParams()
-
-  const [vehicle, setVehilcle] = useState({})
-  const [defaultPrice, setDefaultPrice] = useState(0)
-  const [price, setPrice] = useState(0)
-  const [count, setCount] = useState(1)
+  const vehicleDetail = useSelector(state => state.vehicleReducer.detail)
+  const {counter} = useSelector(state => state)
 
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   useEffect(() => {
+    dispatch(empty())
     window.scrollTo(0, 0)
-    getVehicle()
-  },[])
+    dispatch(getVehicleDetail(id))
+    activeNav()
+    console.log('test', counter)
+  }, [])
 
-  const getVehicle = async () => {
-    const {data} = await axios.get(`http://localhost:5000/vehicles/${id}`)
-    setVehilcle(data.results)
-    setDefaultPrice(data.results.price)
-    setPrice(data.results.price)
-  }
+  const dataVehicle = vehicleDetail.vehicle
   
   const countPlus = () => {
-    setPrice(defaultPrice + price )
-    setCount(count + 1)
+    dispatch(increment(dataVehicle.price))
   }
   const countMinus = () => {
-    if(count > 1) {
-      setPrice(price - defaultPrice)
-      setCount(count - 1)
-    }
+    dispatch(decrement())
   }
   const backNavigate = () => {
     window.history.back()
   }
   const toReservation = () => {
-    navigate(`/reservation/${id}/${count}`)
+    navigate(`/reservation/${id}`)
   }
 
   return (
@@ -57,17 +52,17 @@ export default function VehicleDetail() {
           </div>
           <div className="col-12 col-lg-6 img-section">
             <div className="cover-image overflow-hidden text-center">
-              <img src={vehicle.image || noImage} alt={vehicle.brand} className='img-fluid'/>
+              <img src={dataVehicle.image || noImage} alt={dataVehicle.brand} className='img-fluid'/>
             </div>
             <div className="row carousel d-flex align-items-center mt-4">
               <button className="col-1 btn" aria-label="previous button">
                 <GrFormPrevious className='prev' />
               </button>
-              <div className="col-5 overflow-hidden rounded">
-                <img src={vehicle.image || noImage} alt={vehicle.brand} className="rounded img-fluid" />
+              <div className="col-5 overflow-hidden rounded text-center">
+                <img src={dataVehicle.image || noImage} alt={dataVehicle.brand} className="rounded img-fluid" />
               </div>
-              <div className="col-5 overflow-hidden rounded">
-                <img src={vehicle.image || noImage} alt={vehicle.brand} className="rounded" />
+              <div className="col-5 overflow-hidden rounded text-center">
+                <img src={dataVehicle.image || noImage} alt={dataVehicle.brand} className="rounded img-fluid" />
               </div>
               <button className="col-1 btn" aria-label="next button">
                 <GrFormNext className='next' />
@@ -76,25 +71,25 @@ export default function VehicleDetail() {
           </div>
           <div className="col-12 col-lg-6 description-section">
             <div className="description">
-              <h2 className="fw-bold">{vehicle.brand}</h2>
-              <p className="text-muted">{vehicle.location}</p>
+              <h2 className="fw-bold">{dataVehicle.brand}</h2>
+              <p className="text-muted">{dataVehicle.location}</p>
             </div>
             <div className="status my-3 d-flex flex-column">
-              <span className="text-success fw-bold my-2">{vehicle.status}</span>
-              <span className="text-danger">{vehicle.payment || 'No prepayment'}</span>
+              <span className="text-success fw-bold my-2">{dataVehicle.status}</span>
+              <span className="text-danger">No prepayment</span>
             </div>
             <div className="mt-4">
-              Capacity: {vehicle.capacity} Person
+              Capacity: {dataVehicle.capacity} Person
             </div>
             <div className="my-2">
-              Type : {vehicle.type}
+              Type : {dataVehicle.type}
             </div>
             <div>
               Reservation: before 2 PM
             </div>
             <div className="price mt-5 text-end">
               Rp.<span className='fs-1'>
-                {new Intl.NumberFormat('id-ID', {maximumSignificantDigits: 3}).format(price)}
+                {new Intl.NumberFormat('id-ID', {maximumSignificantDigits: 3}).format(dataVehicle.price + counter.totalPrice)}
                 </span>/day
             </div>
             <div className="my-auto">
@@ -102,7 +97,7 @@ export default function VehicleDetail() {
                 <button className="btn plus" aria-label="button plus" onClick={countPlus}>
                   <BiPlus className=''/>
                 </button>
-                <div className="count">{count}</div>
+                <div className="count">{counter.totalItem}</div>
                 <button className="btn minus" aria-label="button minus" onClick={countMinus}>
                   <BiMinus className=''/>
                 </button>
@@ -132,3 +127,10 @@ export default function VehicleDetail() {
   )
     
 }
+// import { increment } from '../redux/actions/counter'
+
+// const mapStateToProps = (state) => ({vehicleDetail: state.vehicleDetail})
+// const mapDispatchToProps = {getVehicleDetail}
+
+// export default connect(mapStateToProps, mapDispatchToProps)(VehicleDetail)
+export default VehicleDetail

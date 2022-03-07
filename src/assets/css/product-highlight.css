@@ -1,0 +1,43 @@
+.main-highlight {
+  height: 206px;
+}
+.main-highlight .highlight {
+  margin-top: -56px;
+  padding-right: 10px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: auto;
+  height: 56px;
+  border-radius: 0px 6px 0px 0px;
+  font-family: 'Nunito', sans-serif;
+  color: #042521;
+}
+@media all and (max-width: 1400px) {
+  .main-highlight {
+    height: 180px;
+  }
+}
+@media all and (max-width: 1200px) {
+  .main-highlight {
+    height: 160px;
+  }
+}
+@media all and (max-width: 992px) {
+  .main-highlight {
+    height: 220px;
+  }
+}
+@media all and (max-width: 768px) {
+  .main-highlight {
+    height: 169px;
+  } 
+}
+@media all and (max-width: 576px) {
+  .main-highlight {
+    height: 140px;
+  }
+  .main-highlight h5,
+  .main-highlight span {
+    font-size: 13px !important;
+  }
+}

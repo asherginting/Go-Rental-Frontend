@@ -1,0 +1,104 @@
+.nav-main nav {
+  height: 100px;
+}
+
+.nav-main nav .navigation {
+  font-size: 1rem;
+  padding: 0 120px;
+  /* display: flex; */
+  justify-content: flex-end;
+}
+
+.nav-main nav .navbar-collapse {
+  padding-right: 0;
+}
+
+.nav-main nav .mail-profile img {
+  width: 54.62px;
+}
+
+.nav-main .message {
+  text-decoration: none;
+}
+
+.nav-main .total-message {
+  background-color: #0085DF;
+  position: relative;
+  top: -18px;
+  margin-right: -18px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.nav-main .icon-message {
+  font-size: 40px;
+  color: #0085DF;
+}
+
+.nav-main .profile img {
+  border-radius: 30px;
+}
+
+.nav-main .btn-green,
+.nav-main .btn-outline {
+  width: 120px;
+}
+
+.nav-main .btn-outline {
+  border: 1px solid #0085DF;
+}
+
+.nav-main .btn-green {
+  background-color: #0085DF;
+}
+
+.nav-main .btn-green:hover,
+.nav-main .btn-outline:hover {
+  background-color: #ECECEC;
+  color: #0085DF;
+}
+
+@media all and (max-width: 991px) {
+  .nav-main nav {
+    height: 95px;
+  }
+
+  .nav-main nav .navigation {
+    justify-content: space-between;
+  }
+
+  .nav-main nav .navigation#navbarNav {
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 0;
+  }
+
+  .nav-main .navbar-nav,
+  .nav-main .mail-profile {
+    width: 100%;
+  }
+
+  .nav-main .mail-profile {
+    /* flex-direction: column; */
+  }
+
+  .nav-main .mail-profile a {
+    margin: 10px 0;
+  }
+
+  .nav-main .mail-profile .message {
+    margin-left: -13px;
+  }
+
+  .nav-main .button-list {
+    flex-direction: column;
+  }
+
+  .nav-main .button-list a {
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+  }
+}

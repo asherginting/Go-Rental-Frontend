@@ -5,7 +5,7 @@
 }
 
 .signup-page .img-section {
-  background-image: url(../images/signup/header-signup.png);
+  background-image: url(../images/signup.png);
   /* background-repeat: no-repeat; */
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,7 +63,7 @@
 .signup-page .signup:hover,
 .signup-page .login:hover,
 .signup-page .google:hover {
-  box-shadow: -3px -4px 26px -5px rgba(50, 219, 198, 0.53);
+  box-shadow: -3px -4px 26px -5px rgba(27, 173, 218, 0.53);
   -webkit-box-shadow: -3px -4px 26px -5px rgba(50, 219, 198, 0.53);
   -moz-box-shadow: -3px -4px 26px -5px rgba(50, 219, 198, 0.53);
 }
@@ -85,7 +85,7 @@
 
 .signup-page .login {
   background-color: #151b1b;
-  color: #32DBC6;
+  color: #0085DF;
 }
 
 .signup-page .row {

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -13,86 +13,80 @@ import History from "./pages/History";
 import Payment from "./pages/Payment";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
+import { useDispatch, useSelector } from "react-redux";
+import { getUser } from "./redux/actions/auth";
+import { popular } from "./redux/actions/vehicle";
+import { category } from "./redux/actions/vehicle";
 
-export default class App extends Component {
-  state = {
-    isLogged: true,
-    moreDetail: ''
-  }
+const App = () => {
+  const {auth} = useSelector(state => state)
+  const dispatch = useDispatch()
 
-  render() {
-    const {isLogged} = this.state
-
-    return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={
-            <Layout ><Home /></Layout>
-          } />
-          <Route path="login" element={
-            <Layout noNavbar={true}><Login /></Layout>
-          } />
-          <Route path="forgot-password" element={
-            <Layout noNavbar={true}><ForgotPassword /></Layout>
-          } />
-          <Route path="signup" element={
-            <Layout noNavbar={true} signup={true}><Signup /></Layout>
-          } />
-          <Route path="vehicle-type" element={
-            <Layout isLogin={isLogged}><VehicleType /></Layout>
-          } />
-          <Route path={`vehicle`} element={
-            <Layout isLogin={isLogged} vehicleMore={true}><VehicleMore /></Layout>
-          } />
-          <Route path="vehicle/:id" element={
-            <Layout isLogin={isLogged}><VehicleDetail /></Layout>
-          } />
-          <Route path="reservation/:id/:qty" element={
-            <Layout isLogin={isLogged}><Reservation /></Layout>
-          } />
-          <Route path="payment/:id/:qty/:idHistory" element={
-            <Layout isLogin={isLogged}><Payment /></Layout>
-          } />
-          <Route path="history" element={
-            <Layout isLogin={isLogged}><History /></Layout>
-          } />
-          <Route path="profile/:idUser" element={
-            <Layout isLogin={isLogged}><Profile /></Layout>
-          } />
-          <Route path={`search`} element={
-            <Layout isLogin={isLogged}><Search /></Layout>
-          } />
-        </Routes>
-        {/* {!this.state.isLogged && <Login isLogin={(value) => this.setState({isLogged: value})} />} */}
-        {/* {this.state.isLogged ? (<> <NavAfterLogin />  <Home /></>) : (<> <NavBeforeLogin /> <Home /> </>)} */}
-      </BrowserRouter>
-    )
-  }
+  useEffect(() => {
+    const token = window.localStorage.getItem('token')
+    // console.log(token)
+    if (token) {
+      dispatch({
+        type: 'AUTH_LOGIN_FULFILLED',
+        payload: {
+          data: {
+            results: {
+              token
+            }
+          }
+        }
+      })
+      dispatch(getUser(token))
+      dispatch(popular())
+      dispatch(category('CARS', 'cars'))
+      dispatch(category('MOTORBIKE', 'motorbike'))
+      dispatch(category('BIKE', 'bike'))
+      dispatch(category('PICKUP', 'pickup'))
+    }
+  }, [dispatch, auth.token])
+  
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={
+          <Home />
+        } />
+        <Route path="login" element={
+          <Layout noNavbar={true}><Login /></Layout>
+        } />
+        <Route path="forgot-password" element={
+          <Layout noNavbar={true}><ForgotPassword /></Layout>
+        } />
+        <Route path="signup" element={
+          <Layout noNavbar={true} signup={true}><Signup /></Layout>
+        } />
+        <Route path="vehicle-type" element={
+          <Layout ><VehicleType /></Layout>
+        } />
+        <Route path={`vehicle`} element={
+          <Layout  vehicleMore={true}><VehicleMore /></Layout>
+        } />
+        <Route path="vehicle/:id" element={
+          <Layout ><VehicleDetail /></Layout>
+        } />
+        <Route path="reservation/:id" element={
+          <Layout ><Reservation /></Layout>
+        } />
+        <Route path="payment/:id" element={
+          <Layout ><Payment /></Layout>
+        } />
+        <Route path="history" element={
+          <Layout ><History /></Layout>
+        } />
+        <Route path="profile" element={
+          <Layout ><Profile /></Layout>
+        } />
+        <Route path={`search`} element={
+          <Layout ><Search /></Layout>
+        } />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-// import React, { Component } from 'react'
-// import { unstable_HistoryRouter as HistoryRouter,BrowserRouter, Route, Routes } from 'react-router-dom'
-// import DetailItem from './pages/DetailItem'
-// import CharacterList from './pages/CharacterList'
-// import CharacterDetail from './pages/CharacterDetail'
-// import { createBrowserHistory } from 'history'
-
-// export default class App extends Component {
-//   componentDidMount(){
-//     console.log(this.props)
-//   }
-//   history = createBrowserHistory()
-//   render() {
-//     return (
-//       <HistoryRouter history={this.history}>
-//         {/* <BrowserRouter> */}
-//           <Routes>
-//             <Route path='characters' element={<CharacterList />} />
-//             <Route path='vehicles/:id' element={<DetailItem />} />
-//             <Route path='characters/:id' element={<CharacterDetail history={this.history} />} />
-//           </Routes>
-//         {/* </BrowserRouter> */}
-//       </HistoryRouter>
-//     )
-//   }
-// }
+export default App;

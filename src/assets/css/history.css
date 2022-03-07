@@ -8,7 +8,7 @@
 }
 
 .history a:hover {
-  color: #49BEB7;
+  color: #0085DF;
 }
 
 .history .text-muted {
@@ -115,6 +115,10 @@ nav form .search-icon:hover {
   color: #B8BECD;
 }
 
+.history .icon-search {
+  font-size: 26px;
+}
+
 .history .search-icon {
   font-size: 25px;
   padding-right: 40px;
@@ -173,7 +177,7 @@ nav form .search-icon:hover {
 .history .vehicle-image2 {
   background-image: url(/assets/images/lambo.png);
 } */
-.history .btn-blue {
+.history .btn-green {
   height: 44px;
   padding: 0 41px;
   text-align: center;
@@ -183,7 +187,7 @@ nav form .search-icon:hover {
   background-color: #0085DF;
 }
 
-.history .btn-blue:hover {
+.history .btn-green:hover {
   background-color: #EBEFD0;
   color: #085F63;
 }
@@ -284,6 +288,10 @@ nav form .search-icon:hover {
     padding-right: 46px;
   }
 
+  .history .icon-search {
+    font-size: 20px;
+  }
+
   .history .search-icon {
     font-size: 17px;
     padding-right: 27px;
@@ -315,7 +323,7 @@ nav form .search-icon:hover {
     font-size: 25px;
   }
 
-  .history .btn-blue {
+  .history .btn-green {
     height: 35px;
     padding: 0 27px
   }
@@ -335,6 +343,10 @@ nav form .search-icon:hover {
     margin: 20px;
     /* width: 225px; */
     height: 166px;
+  }
+
+  .history .filter {
+    margin-top: 20px;
   }
 
   .history .highlight {
@@ -389,7 +401,7 @@ nav form .search-icon:hover {
 
   .history .search-icon {
     font-size: 13px;
-    padding-right: 27px;
+    padding-right: 0px;
   }
 
   .history .form-control::placeholder,

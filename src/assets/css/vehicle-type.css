@@ -7,7 +7,7 @@ body {
 }
 
 .vehicle-type nav {
-  height: 150px;
+  height: 100px;
 }
 
 .vehicle-type nav .navigation {
@@ -22,6 +22,11 @@ body {
 
 .vehicle-type nav .mail-profile img {
   width: 54.62px;
+}
+
+.vehicle-type nav form .form-control:focus,
+.vehicle-type nav form .form-control:hover {
+  padding-right: 53px;
 }
 
 .vehicle-type .message {
@@ -39,7 +44,7 @@ body {
 }
 
 .vehicle-type .icon-message {
-  font-size: 55px;
+  font-size: 40px;
   color: #0085DF;
 }
 
@@ -47,8 +52,16 @@ body {
   border-radius: 30px;
 }
 
+.vehicle-type .form-search {
+  height: 100px;
+}
+
 .vehicle-type nav form {
   height: auto;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 253, 233, 0.25) !important;
 }
 
 .vehicle-type nav form {
@@ -63,10 +76,6 @@ body {
   padding-left: 8px;
 }
 
-/* .vehicle-type nav input.form-control:focus,
-.vehicle-type nav input.form-control:hover {
-  padding-right: 45px;
-} */
 .vehicle-type nav form button {
   height: fit-content;
 }
@@ -98,17 +107,24 @@ body {
 }
 
 .vehicle-type form .form-control {
-  padding-left: 75px;
-  padding-right: 80px;
+  padding: 15px 20px;
+  /* padding-left: 50px;
+  padding-right: 59px; */
 }
 
-.vehicle-type form .form-control:focus {
-  padding-right: 100px;
+.vehicle-type nav form .form-control {
+  padding: 8px 20px;
+}
+
+.vehicle-type form .form-control:focus,
+.vehicle-type form .form-control:hover {
+  /* padding-right: 59px; */
+
 }
 
 .vehicle-type form .search-icon {
   font-size: 25px;
-  padding-right: 40px;
+  padding-right: 20px;
 }
 
 /* section */
@@ -145,11 +161,11 @@ body {
   height: 337px;
 }
 
-.vehicle-type section img {
-  border-radius: 10px;
+section .product-highlight img {
+  /* border-radius: 10px; */
   margin-bottom: 15px;
-  /* width: 284px; */
-  height: 200px;
+  /* width: 284px;
+  height: 337px; */
 
 }
 
@@ -157,26 +173,40 @@ body {
   text-decoration: none;
 }
 
-.vehicle-type section .highlight {
-  margin-top: -67px;
+section .highlight {
+  margin-top: -56px;
+  padding-right: 10px;
   position: relative;
-  background-color: #ffff;
-  width: 120px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: auto;
   height: 56px;
   border-radius: 0px 6px 0px 0px;
   font-family: 'Nunito', sans-serif;
   color: #042521;
 }
 
-.vehicle-type section .highlight h5 {
+section .highlight h5 {
   color: #042521;
   font-weight: 600;
   font-size: 17px;
 }
 
-.vehicle-type section .highlight span {
+section .highlight span {
   font-size: 17px;
   color: #686767;
+}
+
+.vehicle-type .btn-green {
+  background-color: #0085DF;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 30px;
+  height: 50px;
+}
+
+.vehicle-type .btn-green:hover {
+  background-color: #EBEFD0;
+  color: #0085DF;
 }
 
 @media all and (max-width: 991px) {
@@ -200,13 +230,19 @@ body {
     width: 100%;
   }
 
-  .vehicle-type .mail-profile {
+  /* .vehicle-type .mail-profile {
     flex-direction: column;
     align-items: start !important;
+  } */
+  /* .vehicle-type .mail-profile a {
+    width: 100%;
+  } */
+  .vehicle-type .mail-profile .message {
+    margin-left: -13px;
   }
 
-  .vehicle-type .mail-profile a {
-    width: 100%;
+  .vehicle-type .form-search {
+    height: 225px;
   }
 
   .vehicle-type nav form {
@@ -223,12 +259,37 @@ body {
   }
 
   .vehicle-type section .highlight {
-    margin-top: -70px;
+    /* margin-top: -70px; */
+  }
+}
+
+@media all and (max-width: 768px) {
+  .vehicle-type form .search-icon {
+    font-size: 20px;
+    padding-right: 10px;
+  }
+
+  .vehicle-type form .form-control {
+    padding-left: 15px;
+    padding-right: 53px;
+  }
+
+  .vehicle-type form .form-control:focus,
+  .vehicle-type form .form-control:hover {
+    padding-right: 45px;
+  }
+
+  .vehicle-type .form-search {
+    height: 330px;
   }
 }
 
 @media all and (max-width: 576px) {
   form .form-control {
     padding-left: 32px;
+  }
+
+  .vehicle-type .form-search {
+    padding: 0 15px;
   }
 }

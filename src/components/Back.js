@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {IoChevronBack} from 'react-icons/io5'
 
 export default class Back extends Component {
 
@@ -7,7 +8,7 @@ export default class Back extends Component {
     return (
       <div class="d-flex flex-row head">
         <a href="/more-detail.html" class="back d-flex mb-5">
-          <i class="fa-solid fa-angle-left me-5"></i>
+          <IoChevronBack className='me-5' />
         </a>
         <span>{this.props.page}</span>
       </div>

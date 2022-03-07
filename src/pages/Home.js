@@ -1,40 +1,33 @@
-import React, { useEffect, useState } from 'react'
-import {default as axios} from 'axios';
+import React, { useEffect } from 'react'
 import '../assets/css/home.css'
-import user from '../assets/images/home/testimonial-edward.png'
+import user from '../assets/images/user-homepage.png'
 import {GrFormPrevious, GrFormNext} from 'react-icons/gr';
 import {FaStar} from 'react-icons/fa'
 import ProductHighlight from '../components/ProductHighlight';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {IoChevronForward} from 'react-icons/io5'
+import Layout from '../components/Layout';
+import { useSelector } from 'react-redux';
+import LoadingSkeleton from '../components/LoadingSkeleton';
 
 const Home = () => {
-  const [vehicle, setVehilcle] = useState([])
-  const [category, setCategory] = useState([])
-  const [allVehicles, setAllVehicles] = useState([])
+  const vehiclePopular = useSelector(state => state.vehicleReducer.popular)
+  const navigate = useNavigate()
 
   useEffect(() => {
-    getVehicle()
-    getCategory()
-  },[])
+    window.scrollTo(0, 0)
+  }, [])
 
-  const dataLocation = []
-  const getVehicle = async () => {
-    const {data} = await axios.get('http://localhost:5000/popular?limit=4')
-    setVehilcle(data.results)
-    // const {item} = await axios.get('http://localhost:5000/popular?limit=100')
-    // setAllVehicles(item.results)
-    // item.results.map((data) => dataLocation.push(data.location))
-    // console.log(dataLocation)
-    console.log(data.results)
+  const handleSubmit = (ev) => {
+    ev.preventDefault()
+    const key = document.getElementById('search').value
+    const location = document.getElementById('location').value
+    const date = document.getElementById('date').value
+    navigate(`/search?keyword=${key}&location=${location}&date=${date}`)
   }
-  const getCategory = async () => {
-    const {data} = await axios.get('http://localhost:5000/categories?limit=100')
-    setCategory(data.results)
-  }  
-  
+
   return (
-    <>
+    <Layout>
     <header className="header-homepage home">
       <div className="opacity">
         <div className="container">
@@ -51,13 +44,14 @@ const Home = () => {
                   <option>Jakarta</option>
                   <option>Kalimantan</option>
                   <option>Malang</option>
-                  {/* {[...new Set(dataLocation)].map((data) => <option key={data}>{data}</option>)} */}
                 </select>
               </div>
               <div className="col-sm-6">
                 <select className="option-form">
                   <option className='d-none'>Type</option>
-                  {category.map((data) => <option key={data.idCategory}>{data.type}</option>)}
+                  <option>Bike</option>
+                  <option>Cars</option>
+                  <option>Motorbike</option>
                 </select>
               </div>
             </div>
@@ -87,16 +81,31 @@ const Home = () => {
           <h2>Popular in town</h2>
           <Link to='/vehicle' className="view-all">View all <IoChevronForward /></Link>
         </div>
-        <div className="row">
-          {vehicle.map((data) => {
+        <div className="row position-relative">
+          {vehiclePopular.isLoading &&
+            <LoadingSkeleton count='4' />
+          }
+          {vehiclePopular.vehicle.map((data, index) => {
             const props = {image: data.image, location: data.location, brand: data.brand, id: data.idVehicle}
-            return <ProductHighlight key={props.id} props={props} />
+            return (index < 4 && <ProductHighlight key={props.id} props={props} />)
           })}
+           <Link to='/vehicle' className="view-all-btn position-absolute"><IoChevronForward /></Link>
         </div>
       </section>
 
       <section className="testimoni mt-5">
         <h2>Testimonials</h2>
+        <div className="col-3 mt-5 profile profile-top">
+            <div className="image">
+              <img src={user} alt="Edward" />
+              <div className="ms-auto next-prev">
+                <button className="btn disabled next" aria-label="next"><GrFormPrevious /></button>
+                <button className="btn prev" aria-label="previous"><GrFormNext /></button>
+              </div>
+            </div>
+            <h5>Edward Newgate</h5>
+            <span>Founder Circle</span>
+          </div>
         <div className="row">
           <div className="col-12 col-lg-6 mt-5 left-testi">
             <div className="comment">
@@ -122,8 +131,12 @@ const Home = () => {
         </div>
       </section>
     </main>
-    </>
+    </Layout>
   )
 }
 
+// const mapStateToProps = (state) => ({vehiclePopular: state.vehiclePopular})
+// const mapDispatchToProps = {getVehiclePopular}
+
+// export default connect(mapStateToProps, mapDispatchToProps)(Home)
 export default Home

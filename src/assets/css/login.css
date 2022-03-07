@@ -3,7 +3,7 @@ body {
 }
 
 header.login.register {
-  background-image: url(../images/login/header-login.png);
+  background-image: url(../images/bg-register.png);
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -98,7 +98,6 @@ header.login .btn-signup:hover {
 }
 
 .login .form-register .login {
-  color: #151b1b;
   background-color: #0085DF;
 }
 
@@ -173,12 +172,6 @@ header.login .btn-signup:hover {
   header.login .opacity .btn {
     width: 100%;
     padding: 15px 0;
-  }
-
-  header.login .btn-signup {
-    box-shadow: 0px 4px 3px 0px rgba(50, 219, 198, 0.75);
-    -webkit-box-shadow: 0px 4px 3px 0px rgba(50, 219, 198, 0.75);
-    -moz-box-shadow: 0px 4px 3px 0px rgba(50, 219, 198, 0.75);
   }
 
   .login .dot.bottom {

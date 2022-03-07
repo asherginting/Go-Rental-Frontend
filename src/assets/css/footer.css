@@ -1,13 +1,17 @@
 /* footer */
 footer {
-  margin-top: 76px;
   color: #848484;
   font-family: 'Mulish', sans-serif;
 }
 
+footer .row {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
 footer img {
   margin-bottom: 26px;
-  width: 80px;
+  width: 86px;
 }
 
 footer p.description {

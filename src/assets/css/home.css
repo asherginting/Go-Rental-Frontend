@@ -4,6 +4,14 @@ body {
   padding: 0;
 }
 
+.btn:active {
+  box-shadow: none !important;
+}
+
+.btn:focus {
+  box-shadow: none !important;
+}
+
 .home .btn-blue {
   width: 120px;
 }
@@ -19,7 +27,7 @@ body {
 
 header.header-homepage {
   margin-top: 100px;
-  background-image: url(../images/home/header-home.png);
+  background-image: url(../images/homepage.png);
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -49,17 +57,20 @@ header.home .opacity .line {
 }
 
 header.home .option-form {
-  padding: 10px;
-  width: 220px;
+  padding: 0 20px;
+  width: -webkit-fill-available;
   height: 52px;
   margin: 35px 0;
-  margin-right: 31px;
   border-radius: 6px;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 header.home .option-form:focus {
   outline: none;
+}
+
+header.home .option-form::placeholder {
+  color: #000000;
 }
 
 header.home .opacity .btn {
@@ -75,6 +86,20 @@ header.home .opacity .btn {
 }
 
 /* section */
+.home section.testimoni .profile-top {
+  display: none;
+}
+
+.home section.testimoni .profile-top img {
+  width: 130px !important;
+}
+
+.home section.testimoni .profile-top .next-prev {
+  margin-left: 0 !important;
+  margin-top: -10px !important;
+  border-radius: 0px 0px 0px 0px !important;
+}
+
 .home .head {
   margin-top: 82px;
   margin-bottom: 56px;
@@ -92,16 +117,40 @@ header.home .opacity .btn {
   color: #0085DF;
 }
 
-main.home section img {
-  border-radius: 10px;
-  margin-bottom: 15px;
+.home .view-all {
+  display: none;
 }
 
+.home .view-all-btn {
+  display: flex;
+  top: 33%;
+  text-align: end;
+  width: 50px;
+  height: 50px;
+  right: 0;
+  border-radius: 67px;
+}
+
+.home .view-all-btn:hover {
+  background-color: #0085DF;
+}
+
+.home .view-all-btn svg {
+  color: blue;
+  text-align: center;
+  margin: auto;
+  font-size: 30px;
+}
+
+/* main.home section img {
+  border-radius: 10px;
+  margin-bottom: 15px;
+} */
 main.home section a {
   text-decoration: none;
 }
 
-main.home section .highlight {
+/* main.home section .highlight {
   margin-top: -67px;
   position: relative;
   background-color: #ffff;
@@ -110,8 +159,7 @@ main.home section .highlight {
   border-radius: 0px 6px 0px 0px;
   font-family: 'Nunito', sans-serif;
   color: #042521;
-}
-
+} */
 main.home section .highlight h5 {
   color: #042521;
   font-weight: 600;
@@ -177,19 +225,36 @@ main.home section .highlight span {
 }
 
 @media all and (max-width: 991px) {
-  nav {
-    height: 95px;
+  .home .view-all {
+    display: block;
   }
 
+  .home .view-all-btn {
+    display: none;
+  }
+
+  .home section.testimoni .profile-top {
+    display: block !important;
+  }
+
+  .home section.testimoni .profile {
+    display: none;
+  }
+
+  .home .left-testi {
+    margin-bottom: 35px;
+  }
+
+  /* nav {
+    height: 95px;
+  }
   nav .navigation {
     flex-wrap: wrap;
     margin: 15px 0 !important;
   }
-
   .navbar-nav li a {
     padding: 15px 0;
   }
-
   .main-nav {
     width: 100%;
     padding-top: 20px;
@@ -197,27 +262,34 @@ main.home section .highlight span {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .button-section {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
   }
-
   .navbar-nav,
   .button-section,
   .btn-blue,
   .btn-outline {
     width: 100%;
   }
-
   nav .btn-outline,
   nav .btn-blue {
     padding: 15px;
   }
-
   .btn-outline {
     margin-bottom: 20px;
+  } */
+}
+
+@media all and (max-width: 768px) {
+  header.home .opacity .btn {
+    width: inherit;
+    margin-top: 15px;
+  }
+
+  header.home .option-form {
+    margin: 20px 0;
   }
 }
 
