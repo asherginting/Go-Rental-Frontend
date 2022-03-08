@@ -141,10 +141,11 @@ import {BiMinus, BiPlus} from 'react-icons/bi'
 import {GrFormPrevious, GrFormNext} from 'react-icons/gr'
 import {IoChevronBack} from 'react-icons/io5'
 import {IoMdHeart} from 'react-icons/io'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, Navigate } from 'react-router-dom'
 import {default as axios} from 'axios';
 import noImage from '../assets/images/no-image.jpg'
 import env from 'react-dotenv'
+import { useSelector } from 'react-redux'
 
 export default function VehicleDetail() {
   const {id} = useParams()
@@ -153,6 +154,7 @@ export default function VehicleDetail() {
   const [defaultPrice, setDefaultPrice] = useState(0)
   const [price, setPrice] = useState(0)
   const [count, setCount] = useState(1)
+  const auth = useSelector(state=> state.auth)
 
   const navigate = useNavigate()
 
@@ -182,10 +184,11 @@ export default function VehicleDetail() {
     window.history.back()
   }
   const toReservation = () => {
-    navigate(`/reservation/${id}/${count}`)
+    navigate(`/reservation/${id}`)
   }
 
   return (
+    <>
     <div className='vehicle-detail my-5'>
       <section className='container first-container'>
         <div className="row pt-5 detail-vehicle">
@@ -267,6 +270,7 @@ export default function VehicleDetail() {
         </form>
       </section>
     </div>
+    </>
   )
     
 }
