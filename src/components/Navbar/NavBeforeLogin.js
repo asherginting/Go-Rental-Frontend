@@ -21,7 +21,7 @@ export default class NavBeforeLogin extends Component {
               <NavList />
               <div className="button-list d-flex align-items-center">
                 <Link to='/login' className="mx-lg-3 ms-xl-1 me-xl-5 btn btn-outline">Login</Link>
-                <Link to='signup' className="btn btn-green">Register</Link>
+                <Link to='/signup' className="btn btn-green">Register</Link>
               </div>
             </div>
           </div>
