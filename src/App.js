@@ -84,6 +84,9 @@ const App = () => {
         <Route path={`search`} element={
           <Layout ><Search /></Layout>
         } />
+        {/* <Route path="verify/:type" element={
+          <Layout noNavbar={true}><Verify /></Layout>
+        } /> */}
       </Routes>
     </BrowserRouter>
   )
