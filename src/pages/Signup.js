@@ -22,7 +22,7 @@ export default class Signup extends Component {
               <input type="text" placeholder="Name" />
               <input type="email" placeholder="Email" />
               <input type="password" placeholder="Password" />
-              <a href="/login.html" className="btn mt-5 signup">Sign Up</a>
+              <a href="#" className="btn mt-5 signup">Sign Up</a>
               <div className="row d-flex align-items-center another">
                 <div className="col"><hr /></div>
                 <div className="col-5 text-muted text-center text-another">or try another way</div>
