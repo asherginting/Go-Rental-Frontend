@@ -7,7 +7,6 @@ import deleteActiveNav from '../helper/deleteActiveNav'
 import {GoSearch} from 'react-icons/go'
 import {BsChevronDown, BsChevronRight} from 'react-icons/bs'
 import { useSelector } from 'react-redux'
-import Layout from '../components/Layout'
 
 export default function History() {
   const [history, setHistory] = useState([])
