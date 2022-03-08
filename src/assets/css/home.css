@@ -118,7 +118,7 @@ header.home .opacity .btn {
 }
 
 .home .view-all {
-  display: none;
+  display: block;
 }
 
 .home .view-all-btn {

@@ -49,7 +49,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={
-          <Home />
+          <Layout><Home /></Layout>
         } />
         <Route path="login" element={
           <Layout noNavbar={true}><Login /></Layout>
@@ -64,7 +64,7 @@ const App = () => {
           <Layout ><VehicleType /></Layout>
         } />
         <Route path={`vehicle`} element={
-          <Layout  vehicleMore={true}><VehicleMore /></Layout>
+          <Layout><VehicleMore /></Layout>
         } />
         <Route path="vehicle/:id" element={
           <Layout ><VehicleDetail /></Layout>
@@ -76,7 +76,7 @@ const App = () => {
           <Layout ><Payment /></Layout>
         } />
         <Route path="history" element={
-          <Layout ><History /></Layout>
+          <Layout vehicleMore={true} ><History /></Layout>
         } />
         <Route path="profile" element={
           <Layout ><Profile /></Layout>

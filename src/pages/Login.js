@@ -43,7 +43,7 @@ const Login = () => {
               
               <div className="col-12 col-md-6 form">
                 <form onSubmit={handleSubmit} className="form-register row">
-                  {auth.isError && auth.errorMessage && <div style={{backgroundColor: 'blue'}} className='alert' role='alert'>{auth.errorMessage}</div>}
+                  {auth.isError && auth.errorMessage && <div style={{backgroundColor: 'red'}} className='alert' role='alert'>{auth.errorMessage}</div>}
                   <input name='username' type="text" placeholder="Username" /> <br />
                   <input name='password' type="password" placeholder="Password" /> <br />
                   <div><Link to='/forgot-password' className="forgot">Forgot password?</Link> <br/></div>
