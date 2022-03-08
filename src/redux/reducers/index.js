@@ -1,32 +1,21 @@
 import { combineReducers } from "redux";
 import vehicleReducer from "./vehicle";
-// import { popular } from "./vehicle";
 import auth from "./auth";
 import counter from "./counter";
-
-const qtyState = {
-  total: 1,
-}
+import { history, detailHistory, deleteHistory } from "./history";
+import { payment } from "./payment";
+// import { updateProfile, registerUser } from "./user";
 
 const rootReducer = combineReducers({
   vehicleReducer,
   auth,
   counter,
-  qty: (state = qtyState, action) => {
-    switch(action.type) {
-      case 'INCREMENT': {
-        state.total += 1
-        return state
-      }
-      case 'DECREMENT': {
-        state.total -= 1
-        return state
-      }
-      default: {
-        return state
-      }
-    }
-  },
+  history,
+  detailHistory,
+  deleteHistory,
+  payment,
+  // updateProfile,
+  // registerUser,
 })
 
 export default rootReducer
