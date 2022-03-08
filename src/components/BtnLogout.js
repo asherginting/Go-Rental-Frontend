@@ -11,7 +11,7 @@ function BtnLogout(props) {
     dispatch({
       type: 'AUTH_LOGOUT'
     })
-    navigate('/login')
+    navigate('/')
   }
   const {className} = props
   return (
