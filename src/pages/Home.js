@@ -151,6 +151,7 @@ import ProductHighlight from '../components/ProductHighlight';
 import { Link } from 'react-router-dom';
 import {IoChevronForward} from 'react-icons/io5'
 import env from 'react-dotenv'
+import LoadingSkeleton from '../components/LoadingSkeleton';
 
 const Home = () => {
   const [vehicle, setVehilcle] = useState([])
@@ -236,10 +237,13 @@ const Home = () => {
           <h2>Popular in town</h2>
           <Link  to={`/vehicle`} className="view-all">View all <IoChevronForward /></Link>
         </div>
-        <div className="row">
-          {vehicle.map((data) => {
+        <div className="row position-relative">
+          {vehicle.isLoading &&
+            <LoadingSkeleton count='4' />
+          }
+          {vehicle.map((data, index) => {
             const props = {image: data.image, location: data.location, brand: data.brand, id: data.idVehicle}
-            return <ProductHighlight key={props.id} props={props} />
+            return (index < 4 && <ProductHighlight key={props.id} props={props} />)
           })}
         </div>
       </section>
