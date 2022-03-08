@@ -2,15 +2,18 @@ import React, { useEffect, useState } from 'react'
 import '../assets/css/history.css'
 import {default as axios} from 'axios'
 import noImage from '../assets/images/no-image.jpg'
-import { Link } from 'react-router-dom'
+import { Link , Navigate} from 'react-router-dom'
 import deleteActiveNav from '../helper/deleteActiveNav'
 import {GoSearch} from 'react-icons/go'
 import {BsChevronDown, BsChevronRight} from 'react-icons/bs'
+import { useSelector } from 'react-redux'
+import Layout from '../components/Layout'
 
 export default function History() {
   const [history, setHistory] = useState([])
   const [newVehicle, setNewVehicle] = useState([])
   const [page, setPage] = useState([])
+  const auth = useSelector(state=> state.auth)
   
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -39,6 +42,8 @@ export default function History() {
     const {image, brand, prepayment, status, idHistory} = props
     const bgImg = image || noImage
     return (
+      <>
+      {auth.token===null && <Navigate to='/login'/>}
       <div className="d-flex align-items-center history-contain" key={idHistory}>
         <div className="row history-data">
           <div className="col-3">
@@ -59,6 +64,7 @@ export default function History() {
           <button className="btn btn-green">Delete</button>
         </div>
       </div>
+      </>
     )
   }
 
