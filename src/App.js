@@ -17,6 +17,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "./redux/actions/auth";
 import { popular } from "./redux/actions/vehicle";
 import { category } from "./redux/actions/vehicle";
+import Verify from "./pages/Verify";
 
 const App = () => {
   const {auth} = useSelector(state => state)
@@ -84,9 +85,9 @@ const App = () => {
         <Route path={`search`} element={
           <Layout ><Search /></Layout>
         } />
-        {/* <Route path="verify/:type" element={
-          <Layout noNavbar={true}><Verify /></Layout>
-        } /> */}
+        <Route path={`verify`} element={
+          <Layout ><Verify /></Layout>
+        } />
       </Routes>
     </BrowserRouter>
   )
