@@ -42,7 +42,7 @@ export default function History() {
     const bgImg = image || noImage
     return (
       <>
-      {auth.token===null && <Navigate to='/login'/>}
+      
       <div className="d-flex align-items-center history-contain" key={idHistory}>
         <div className="row history-data">
           <div className="col-3">
@@ -68,6 +68,8 @@ export default function History() {
   }
 
   return (
+    <>
+    {auth.token===null && <Navigate to='/login'/>}
     <div className='history'>
       <main className="row main-section">
         <section className="col-12 col-md -8 ps-5">
@@ -141,5 +143,6 @@ export default function History() {
         </aside>
       </main>
     </div>
+    </>
   )
 }
