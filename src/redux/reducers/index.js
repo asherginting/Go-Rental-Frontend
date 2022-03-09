@@ -4,6 +4,7 @@ import auth from "./auth";
 import counter from "./counter";
 import { history, detailHistory, deleteHistory } from "./history";
 import { payment } from "./payment";
+import register from "./register"
 // import { updateProfile, registerUser } from "./user";
 
 const rootReducer = combineReducers({
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   detailHistory,
   deleteHistory,
   payment,
+  register,
   // updateProfile,
   // registerUser,
 })
