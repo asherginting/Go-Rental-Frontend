@@ -259,8 +259,8 @@ const Home = () => {
               <p>”It was the right decision to rent vehicle here, I spent less money and enjoy the trip. It was an amazing experience to have a ride for wildlife trip!”</p>
             </div>
             <div className="profile">
-              <h5>Edward Newgate</h5>
-              <span>Founder Circle</span>
+              <h5>Asher Azriel Ginting</h5>
+              <span>Founder</span>
             </div>
           </div>
           <div className="col-12 col-lg-6 mt-5 profile">
