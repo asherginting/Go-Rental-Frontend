@@ -196,17 +196,20 @@ const Home = () => {
               <div className="col-sm-6">
                 <select className="option-form">
                   <option className='d-none'>Location</option>
-                  <option>Bali</option>
-                  <option>Yogyakarta</option>
                   <option>Jakarta</option>
-                  <option>Kalimantan</option>
-                  <option>Malang</option>
+                  <option>Bali</option>
+                  <option>bandung</option>
+                  <option>Yogyakarta</option>
+                  <option>Batam</option>
                   {/* {[...new Set(dataLocation)].map((data) => <option key={data}>{data}</option>)} */}
                 </select>
               </div>
               <div className="col-sm-6">
                 <select className="option-form">
                   <option className='d-none'>Type</option>
+                  <option>Cars</option>
+                  <option>Motorbike</option>
+                  <option>Bike</option>
                   {category.map((data) => <option key={data.idCategory}>{data.type}</option>)}
                 </select>
               </div>
