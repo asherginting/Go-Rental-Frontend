@@ -21,11 +21,11 @@ export default class Footer extends Component {
                 <div className="my-5 col-12 col-md-4">
                   <h5>Destinations</h5>
                   <ul className="list-group">
-                    <li>Bali</li>
-                    <li>Yogyakarta</li>
                     <li>Jakarta</li>
-                    <li>Kalimantan</li>
-                    <li>Malang</li>
+                    <li>Bali</li>
+                    <li>Bandung</li>
+                    <li>Yogyakarta</li>
+                    <li>Batam</li>
                   </ul>
                 </div>
                 <div className="my-5 col-12 col-md-4">
