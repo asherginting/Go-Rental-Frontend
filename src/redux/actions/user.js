@@ -66,7 +66,7 @@ export const changePassword = (email) => {
   param.append('email', email);
   return ({
     type: 'CHANGE_PASSWORD',
-    payload: http().post('/auth/forgotPassword', param),
+    payload: http().post('/auth/forgot', param),
   });
 };
 
@@ -78,6 +78,6 @@ export const verifyPassword = (email, code, password, confirmPassword) => {
   param.append('confirmPassword', confirmPassword);
   return ({
     type: 'VERIFY_PASSWORD',
-    payload: http().post('/auth/forgotPassword', param),
+    payload: http().post('/auth/forgot', param),
   });
 };

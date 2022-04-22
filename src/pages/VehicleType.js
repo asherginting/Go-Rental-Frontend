@@ -43,7 +43,7 @@ const VehicleType = () => {
           <IoChevronForward />
         </Link>
       </div>
-      <div className="row">
+      <div className="row mb-5">
         {state.isLoading && <LoadingSkeleton count="4" />}
         {state.vehicle.map((data, index) => {
           const props = {
@@ -67,7 +67,7 @@ const VehicleType = () => {
       {product('Popular in town', popular)}
       {product('Cars', cars, 'cars')}
       {product('Motorbike', motorbike, 'motorbike')}
-      {product('Bike', bike, 'bike')}
+      {product('Bike', bike, 'Bike')}
     </div>
   )
 }

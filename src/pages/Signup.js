@@ -41,7 +41,6 @@ function Signup() {
         <div className="opacity">
           <form className="d-flex flex-column justify-content-center align-items-center">
             <h2 className="my-5 container header-sign">Sign Up</h2>
-            {registerUser.isError && registerUser.message && <div className="mx-5 text-center text-danger h4 mt-3">{registerUser.message}</div>}
             <input type="text" placeholder="Name" id="name" />
             <input type="text" placeholder="Username" id="username" />
             <input type="email" placeholder="Email" id="email" />

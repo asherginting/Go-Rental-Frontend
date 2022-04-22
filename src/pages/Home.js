@@ -100,7 +100,6 @@ const Home = () => {
               };
               return (index < 4 && <ProductHighlight key={props.id} props={props} />);
             })}
-            <Link to="/vehicle" className="view-all-btn position-absolute"><IoChevronForward /></Link>
           </div>
         </section>
 

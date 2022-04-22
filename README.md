@@ -1,59 +1,46 @@
-<p align="center">
-  <a href="" rel="noopener">
- <a href="https://imgbb.com/"><img src="https://i.ibb.co/8P4m5hB/Icon-Go-Rental.png" alt="Icon-Go-Rental" border="0"></a>
-</p>
+<a href="https://aimeos.org/">
+    <img src="https://i.ibb.co/8P4m5hB/Icon-Go-Rental.png" alt="Aimeos logo" title="Aimeos" align="right" />
+</a>
 
----
+# Go - Rental Frontend
 
-## 🧐 About
-This is the repository fw5-react-frontend
+Go - Rental is plan and book your perfect trip with expert advice, travel tips for vehicle information from us
+
+
+
+[![Postman](https://user-images.githubusercontent.com/39787908/164591378-8be69c4b-7d62-4ff0-896e-c3c7c7986d35.png)](#)
+
 ## Installation
 
-How To Install the Project:
+1. Clone this repo
+```
+git clone https://github.com/asherginting/Go-Rental-Frontend
+```
 
-#### 1. Run the command into your project folder, I made the folder name "fw5-react-frontend"
- `npx create-react-app fw5-react-frontend --use-npm`
+2. Install module
+```
+npm install
+```
 
-#### 2. Clone Github Project [Github](https://github.com/asherginting/fw5-react-frontend)
- `https://github.com/asherginting/fw5-react-frontend` 
+3. Make your file .env
 
-#### 3. Install Package for Bootstrap
- `npm i bootstrap @popperjs/core`
+[![Postman](https://user-images.githubusercontent.com/39787908/164591611-14f2f345-1335-4e63-a6bd-8640a191bcb8.png)](#)
 
-#### 3. Install Package React Icon
- `npm i react-icons`
-   
+4. ```npm run start``` to run the project
+5. **Done**, Project default run on http://localhost:3000
+
 <br>
 
-## Running
-
-How To Running the Project:
-
-#### `npm run start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-#### Preview Home By Netlify
-<a href="https://ibb.co/2gf5Lyj"><img src="https://i.ibb.co/t8W3N4b/Screenshot-from-2022-02-28-15-50-13.png" alt="Screenshot-from-2022-02-28-15-50-13" border="0"></a>
-
-## ⛏️ Built Using
-
-- [Axios](https://www.npmjs.com/package/axios)
-- [Bootstrap 5](https://www.npmjs.com/package/bootstrap)
-- [React-Icons](https://www.npmjs.com/package/react-icons)
-- [React-Router-Dom](https://www.npmjs.com/package/router-dom)
-- [History](https://www.npmjs.com/package/history)
 ## 💻 Backend & Responsive Web
 
-Repo Backend : https://github.com/asherginting/fw5-backend-beginner
+Repo Backend : https://github.com/asherginting/Go-Rental-Backend
 <br>
 Repo Responsive Web : https://github.com/asherginting/fw5-responsive-website
 
 ## 💻 Live Demo
 
-[Netlify](https://vehicle-rent.netlify.app/) <br>
-[Heroku](https://vehiclerentapp.herokuapp.com/)
+[Go - Rental - Netlify](https://vehicle-rent.netlify.app/) <br>
+[Go - Rental - Heroku](https://vehiclerentapp.herokuapp.com/)
 
 ## ✍️ Authors
 

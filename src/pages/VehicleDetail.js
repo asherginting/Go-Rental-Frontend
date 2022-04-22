@@ -15,7 +15,6 @@ import LoadingSkeleton from '../components/LoadingSkeleton';
 
 function VehicleDetail() {
   const { id } = useParams();
-  // const [imgErr, setImgErr] = useState();
   const vehicleDetail = useSelector((state) => state.vehicleReducer.detail);
   const { counter, auth } = useSelector((state) => state);
 
@@ -140,9 +139,11 @@ function VehicleDetail() {
           </form>
         )
           : (
-            <div className="d-flex justify-content-center align-items-center flex-column">
-              <p className="h2 text-center mb-5">Before making reservation, please login first</p>
-              <Link to="/login" className="btn btn-green w-75">Go to login</Link>
+            <div className="d-flex justify-content-between">
+              <p className="h5 text-center mb-5">Please Login, to make reservation {'>>'} </p>
+              <Link to="/login">
+              <p className="h5 text-center mb-5">Login here</p>
+              </Link>
             </div>
           )}
       </section>
