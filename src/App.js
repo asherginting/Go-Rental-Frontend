@@ -85,7 +85,7 @@ const App = () => {
         <Route path={`search`} element={
           <Layout ><Search /></Layout>
         } />
-        <Route path={`verify`} element={
+        <Route path={`verify/:type`} element={
           <Layout ><Verify /></Layout>
         } />
       </Routes>
