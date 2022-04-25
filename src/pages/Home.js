@@ -75,7 +75,9 @@ const Home = () => {
                 </label>
               </div>
             </div>
+            <Link to="/vehicle-type">
             <button className="btn btn-blue" aria-label="explore">Explore</button>
+            </Link>
           </form>
         </div>
       </div>
