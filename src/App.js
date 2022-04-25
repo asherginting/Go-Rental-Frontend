@@ -19,6 +19,7 @@ import { popular } from "./redux/actions/vehicle";
 import { category } from "./redux/actions/vehicle";
 import Verify from "./pages/Verify";
 import VerifyForgot from "./pages/VerifyForgot";
+import AddItems from "./pages/AddItems";
 
 const App = () => {
   const {auth} = useSelector(state => state)
@@ -91,6 +92,9 @@ const App = () => {
         } />
         <Route path={`verifyforgot`} element={
           <Layout noNavbar={true} ><VerifyForgot /></Layout>
+        } />
+        <Route path={`add-items`} element={
+          <Layout><AddItems /></Layout>
         } />
       </Routes>
     </BrowserRouter>
