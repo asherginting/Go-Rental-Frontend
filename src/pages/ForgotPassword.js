@@ -22,7 +22,9 @@ export default class ForgotPassword extends Component {
               If you haven`t received any link, click resend link</p>
             <form className="text-center form">
               <input type="email" placeholder="Enter your email address" />
+              <Link to='/VerifyForgot'>
               <button className="btn send-link">Send Link</button>
+              </Link>
               <button className="btn resend-link">Resend Link</button>
             </form>
           </div>
