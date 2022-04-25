@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import NavList from './NavList'
+import AdminNavList from './AdminNavList'
 import '../../assets/css/vehicle-type.css'
 import logo from "../../assets/images/Go-Rental x100.png"
 import {FiMail} from 'react-icons/fi'
@@ -30,12 +31,7 @@ export default function NavPopular() {
           </button>
           <div className="collapse navbar-collapse navigation" id="navbarNav">
             <NavList />
-            {/* <form onSubmit={handleSubmit} className="d-flex position-relative">
-              <input name='search' className="form-control" type="search" placeholder="Search vehicle" />
-              <button type="submit" className="btn position-absolute end-0">
-                <AiOutlineSearch className='search-icon' />
-              </button>
-            </form> */}
+            <AdminNavList/>
             <div className="mail-profile ms-xl-5 d-flex align-items-center">
               <Link to='/message' className="me-4 message"><span className="text-white badge total-message">1</span><FiMail className='icon-message' /></Link>
               <Link to='/profile' className='profile'>
