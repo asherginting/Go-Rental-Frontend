@@ -18,6 +18,7 @@ import { getUser } from "./redux/actions/auth";
 import { popular } from "./redux/actions/vehicle";
 import { category } from "./redux/actions/vehicle";
 import Verify from "./pages/Verify";
+import VerifyForgot from "./pages/VerifyForgot";
 
 const App = () => {
   const {auth} = useSelector(state => state)
@@ -87,6 +88,9 @@ const App = () => {
         } />
         <Route path={`verify/:type`} element={
           <Layout noNavbar={true} ><Verify /></Layout>
+        } />
+        <Route path={`verifyforgot`} element={
+          <Layout noNavbar={true} ><VerifyForgot /></Layout>
         } />
       </Routes>
     </BrowserRouter>
