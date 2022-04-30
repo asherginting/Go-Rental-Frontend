@@ -39,8 +39,8 @@ Repo Responsive Web : https://github.com/asherginting/fw5-responsive-website
 
 ## 💻 Live Demo
 
-[Go - Rental - Netlify](https://vehicle-rent.netlify.app/) <br>
-[Go - Rental - Heroku](https://vehiclerentapp.herokuapp.com/)
+[Go - Rental - Netlify](#) <br>
+[Go - Rental - Heroku](#)
 
 ## ✍️ Authors
 
