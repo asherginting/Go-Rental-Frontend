@@ -4,7 +4,7 @@
 
 # Go - Rental Frontend
 
-Go - Rental is plan and book your perfect trip with expert advice, travel tips for vehicle information from us
+Go - Rental is plan and book your perfect trip with expert advice, travel tips for vehicle information from us.
 
 
 
