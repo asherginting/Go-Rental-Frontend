@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../assets/css/vehicle-detail.css'
 import {default as axios} from 'axios'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import {IoChevronBack} from 'react-icons/io5'
 import activeNav from '../helper/activeNav'
 import { getVehicleDetail } from '../redux/actions/vehicle'
@@ -140,7 +140,9 @@ export default function Payment() {
         </div>
 
         <div className="pay-now mt-5 px-2">
-          <a href="#" className="btn btn-green w-100 mt-3">Finish payment: <span className="text-danger time">59:30</span></a>
+          <Link to="/history">
+          <a className="btn btn-green w-100 mt-3">Finish payment: <span className="text-danger time">59:99</span></a>
+          </Link>
         </div>
       </section>
     </div>
