@@ -6,7 +6,8 @@ import auth from "./auth";
 import counter from "./counter";
 import { history, detailHistory, deleteHistory } from "./history";
 import { payment } from "./payment";
-import register from "./register"
+import register from "./register";
+import AddItems from "../../pages/AddItems";
 import {
   updateProfile, registerUser, verifyUser, changePwd, verifyPwd,
 } from './user';
@@ -30,6 +31,7 @@ const rootReducer = combineReducers({
   verifyUser,
   changePwd,
   verifyPwd,
+  AddItems,
 })
 
 export default rootReducer
