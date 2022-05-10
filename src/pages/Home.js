@@ -1,35 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import {default as axios} from 'axios';
+import React, { useEffect} from 'react'
 import '../assets/css/home.css'
 import user from '../assets/images/user-homepage.png'
 import {GrFormPrevious, GrFormNext} from 'react-icons/gr';
 import {FaStar} from 'react-icons/fa'
 import Vehicle from '../components/Vehicle';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {IoChevronForward} from 'react-icons/io5'
-import env from 'react-dotenv'
 import LoadingSkeleton from '../components/LoadingSkeleton';
 import { useSelector, useDispatch } from 'react-redux';
 import { popular } from '../redux/actions/vehicle';
 
 const Home = () => {
   const vehiclePopular = useSelector((state) => state.vehicleReducer.popular);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   useEffect(() => {
     window.scrollTo(0, 0);
     dispatch(popular());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleSubmit = (ev) => {
-    ev.preventDefault();
-    const key = document.getElementById('search').value;
-    const location = document.getElementById('location').value;
-    const date = document.getElementById('date').value;
-    navigate(`/search?keyword=${key}&location=${location}&date=${date}`);
-  };
-  
   return (
     <>
     <header className="header-homepage home">

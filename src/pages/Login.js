@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import '../assets/css/login.css'
 import dot from '../assets/images/dot-register.png'
 import google from '../assets/images/google.png'
@@ -13,6 +13,7 @@ const Login = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
     console.log(auth)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleSubmit = (ev) => {

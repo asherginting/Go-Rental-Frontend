@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import NavList from './NavList'
 import '../../assets/css/nav-main.css'

@@ -26,6 +26,7 @@ function VehicleDetail() {
     window.scrollTo(0, 0);
     dispatch(getVehicleDetail(id));
     activeNav();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const dataVehicle = vehicleDetail.vehicle;

@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import '../assets/css/vehicle-type.css'
 import Vehicle from '../components/Vehicle';
 import {BiSearchAlt2} from 'react-icons/bi'
 import {IoChevronForward} from 'react-icons/io5'
 import { Link, useNavigate } from 'react-router-dom';
-import {default as axios} from 'axios';
-import env from 'react-dotenv';
 import { category, popular as popularVehicle } from '../redux/actions/vehicle';
 import { useDispatch, useSelector } from 'react-redux';
 import searchURL from '../helper/searchURL';
@@ -27,6 +25,7 @@ const VehicleType = () => {
     dispatch(category('CARS', 'cars'));
     dispatch(category('MOTORBIKE', 'motorbike'));
     dispatch(category('BIKE', 'bike'));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSubmit = (ev) => {

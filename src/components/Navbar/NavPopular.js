@@ -1,23 +1,15 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import NavList from './NavList'
 import AdminNavList from './AdminNavList'
 import '../../assets/css/vehicle-type.css'
 import logo from "../../assets/images/Go-Rental x100.png"
 import {FiMail} from 'react-icons/fi'
-import {AiOutlineSearch} from 'react-icons/ai'
 import noImage from '../../assets/images/no-pp.jpg'
 import { useSelector } from 'react-redux'
 
 export default function NavPopular() {
-  const navigate = useNavigate()
   const {auth} = useSelector(state => state)
-
-  const handleSubmit = (ev) => {
-    ev.preventDefault()
-    const search = ev.target.elements['search'].value
-    navigate(`/search?keyword=${search}`)
-  }
 
   return (
     <div className='vehicle-type'>

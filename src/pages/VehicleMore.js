@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { useEffect } from 'react';
 import '../assets/css/vehicle-type.css';
 import { useSearchParams } from 'react-router-dom';

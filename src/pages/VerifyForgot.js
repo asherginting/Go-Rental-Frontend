@@ -1,7 +1,6 @@
-import React, { Component, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import '../assets/css/forgot-password.css'
-import {IoChevronBack} from 'react-icons/io5'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { verifyRegister } from '../redux/actions/verifyRegister'
 import { useDispatch } from 'react-redux'
 

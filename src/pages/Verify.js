@@ -13,6 +13,7 @@ function Verify() {
   useEffect(() => {
     window.scrollTo(0, 0);
     dispatch({ type: 'VERIFY_USER_CLEAR' });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSubmit = (ev) => {

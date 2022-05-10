@@ -13,6 +13,7 @@ function ForgotPassword() {
   useEffect(() => {
     window.scrollTo(0, 0);
     dispatch({ type: 'CHANGE_PASSWORD_CLEAR' });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSubmit = (ev) => {

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useEffect } from 'react'
 import '../assets/css/vehicle-detail.css'
-import {default as axios} from 'axios'
 import { Link, useParams } from 'react-router-dom'
 import {IoChevronBack} from 'react-icons/io5'
 import activeNav from '../helper/activeNav'
@@ -19,6 +19,7 @@ export default function Payment() {
     window.scrollTo(0, 0)
     dispatch(getVehicleDetail(id))
     activeNav()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const back = () => {
