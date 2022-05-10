@@ -107,7 +107,7 @@ const Home = () => {
 
       <section className="testimoni mt-5">
         <h2>Testimonials</h2>
-        <div className="row">
+        <div className="row mb-5">
           <div className="col-12 col-lg-6 mt-5 left-testi">
             <div className="comment">
               <div className="stars">
