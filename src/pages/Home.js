@@ -4,7 +4,7 @@ import '../assets/css/home.css'
 import user from '../assets/images/user-homepage.png'
 import {GrFormPrevious, GrFormNext} from 'react-icons/gr';
 import {FaStar} from 'react-icons/fa'
-import ProductHighlight from '../components/ProductHighlight';
+import Vehicle from '../components/Vehicle';
 import { Link, useNavigate } from 'react-router-dom';
 import {IoChevronForward} from 'react-icons/io5'
 import env from 'react-dotenv'
@@ -100,7 +100,7 @@ const Home = () => {
               const props = {
                 image: data.image, location: data.location, brand: data.brand, id: data.idVehicle,
               };
-              return (index < 4 && <ProductHighlight key={props.id} props={props} />);
+              return (index < 4 && <Vehicle key={props.id} props={props} />);
             })}
           </div>
         </section>

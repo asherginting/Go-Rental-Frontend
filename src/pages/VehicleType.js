@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../assets/css/vehicle-type.css'
-import ProductHighlight from '../components/ProductHighlight';
+import Vehicle from '../components/Vehicle';
 import {BiSearchAlt2} from 'react-icons/bi'
 import {IoChevronForward} from 'react-icons/io5'
 import { Link, useNavigate } from 'react-router-dom';
@@ -49,7 +49,7 @@ const VehicleType = () => {
           const props = {
             image: data.image, location: data.location, brand: data.brand, id: data.idVehicle,
           };
-          return (index < 4 && <ProductHighlight key={props.id} props={props} />);
+          return (index < 4 && <Vehicle key={props.id} props={props} />);
         })}
       </div>
     </section>

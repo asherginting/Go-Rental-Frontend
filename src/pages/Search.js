@@ -1,6 +1,6 @@
 // import React, { useEffect, useState } from 'react'
 // import '../assets/css/vehicle-type.css'
-// import ProductHighlight from '../components/ProductHighlight'
+// import Vehicle from '../components/Vehicle'
 // import {default as axios} from 'axios';
 // import { useNavigate, useSearchParams } from 'react-router-dom';
 // import {BiSearchAlt2} from 'react-icons/bi'
@@ -84,7 +84,7 @@
 //         <div className='row'>
 //           {search.vehicle.map(data => {
 //             const props = {image: data.image, location: data.location, brand: data.brand, id: data.idVehicle}
-//             if (data.qty > 0) return <ProductHighlight key={props.id} props={props} />
+//             if (data.qty > 0) return <Vehicle key={props.id} props={props} />
 //           })}
 //         </div>
 //         <div className='my-4 text-center'>
@@ -103,7 +103,7 @@
 
 import React, { useEffect, useState } from 'react'
 import '../assets/css/vehicle-type.css'
-import ProductHighlight from '../components/ProductHighlight'
+import Vehicle from '../components/Vehicle'
 import {default as axios} from 'axios';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import {BiSearchAlt2} from 'react-icons/bi'
@@ -169,7 +169,7 @@ export default function Search() {
         <div className='row'>
           {vehicle.map(data => {
             const props = {image: data.image, location: data.location, brand: data.brand, id: data.idVehicle}
-            return <ProductHighlight key={props.id} props={props} />
+            return <Vehicle key={props.id} props={props} />
           })}
         </div>
         <div className='my-4 text-center'>

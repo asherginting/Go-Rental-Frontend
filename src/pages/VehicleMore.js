@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import '../assets/css/vehicle-type.css';
 import { useSearchParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import ProductHighlight from '../components/ProductHighlight';
+import Vehicle from '../components/Vehicle';
 import activeNav from '../helper/activeNav';
 import { nextPopular } from '../redux/actions/vehicle';
 import LoadingSkeleton from '../components/LoadingSkeleton';
@@ -35,7 +35,7 @@ export default function VehicleMore() {
             const props = {
               image: data.image, location: data.location, brand: data.brand, id: data.idVehicle,
             };
-            if (data.qty > 0) return <ProductHighlight key={props.id} props={props} />;
+            if (data.qty > 0) return <Vehicle key={props.id} props={props} />;
           })}
         </div>
         <div className="my-4 text-center">
