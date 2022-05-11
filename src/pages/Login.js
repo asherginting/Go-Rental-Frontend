@@ -25,7 +25,7 @@ const Login = () => {
   
   return (
     <>
-      {auth.token !== null && <Navigate to='/profile' />}
+      {auth.token !== null && <Navigate to='/' />}
       <header className="register login">
         <div className="opacity">
           <div className="container">

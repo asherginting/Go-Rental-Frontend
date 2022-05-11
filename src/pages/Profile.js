@@ -70,10 +70,13 @@ export default function Profile() {
             </div>
           </div>
           <div className="row btn-group d-flex flex-row justify-content-between">
-            <div className="col-lg-6 text-center">
+            <div className="col-lg-4 text-center">
               <button className="my-3 w-100 btn btn-save">Save Changes</button>
             </div>
-            <div className="col-lg-6 text-center">
+            <div className="col-lg-4 text-center">
+              <button className="my-3 w-100 btn btn-edit">Edit Password</button>
+            </div>
+            <div className="col-lg-4 text-center">
               <button className="my-3 w-100 btn btn-cancel">Cancel</button>
             </div>
           </div>
