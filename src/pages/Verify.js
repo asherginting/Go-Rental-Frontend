@@ -53,7 +53,7 @@ function Verify() {
             <p className="text-center">{registerUser.message}</p>
             {type === 'register'
             && (
-            <form onSubmit={handleSubmit} className="text-center form">
+            <form onSubmit={handleSubmit} className="text-center form d-flex flex-column justify-content-center align-items-center">
               {verifyUser.isSuccess && <Navigate to="/login" />}
               <input name="username" type="text" placeholder="Enter your username" />
               <input name="code" type="text" placeholder="Enter your code" />
