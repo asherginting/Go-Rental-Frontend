@@ -38,7 +38,6 @@ const Home = () => {
                   <option>bandung</option>
                   <option>Yogyakarta</option>
                   <option>Batam</option>
-                  {/* {[...new Set(dataLocation)].map((data) => <option key={data}>{data}</option>)} */}
                 </select>
               </div>
               <div className="col-sm-6">
@@ -47,7 +46,6 @@ const Home = () => {
                   <option>Cars</option>
                   <option>Motorbike</option>
                   <option>Bike</option>
-                  {/* {category.map((data) => <option key={data.idCategory}>{data.type}</option>)} */}
                 </select>
               </div>
             </div>

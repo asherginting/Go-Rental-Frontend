@@ -3,14 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import noImage from '../assets/images/no-image.jpg';
 import handleImg from '../assets/images/no-image.jpg';
 import '../assets/css/product-highlight.css';
-// import { useDispatch, useSelector } from 'react-redux';
 
 export default function Vehicle({ props }) {
-  // const [imgErr, setImgErr] = useState();
   const {
     image, location, brand, id,
   } = props;
-  // const bg = image || noImage;
 
   const navigate = useNavigate();
 
