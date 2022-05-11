@@ -140,12 +140,23 @@ function VehicleDetail() {
           </form>
         )
           : (
-            <div className="d-flex justify-content-between">
-              <p className="h5 text-center mb-5">Please Login, to make reservation {'>>'} </p>
-              <Link to="/login">
-              <p className="h5 text-center mb-5">Login here</p>
-              </Link>
-            </div>
+            <><form className="row">
+              <div className="col-12 col-md">
+                <button className="btn btn-black" type="button">Chat Admin</button>
+              </div>
+              <div className="col-12 col-md text-center btn-reservation">
+                <Link to="/login">
+                <button className="btn btn-green" type="button">Reservation</button>
+                </Link>
+              </div>
+              <div className="col-12 col-md-3 text-end">
+                <button className="btn btn-black" type="button">
+                  <IoMdHeart />
+                  <span className="ps-2">Like</span>
+                </button>
+              </div>
+            </form>
+            </>
           )}
       </section>
     </div>
