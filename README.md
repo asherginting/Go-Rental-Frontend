@@ -8,7 +8,7 @@ Go - Rental is plan and book your perfect trip with expert advice, travel tips f
 
 
 
-[![Postman](https://user-images.githubusercontent.com/39787908/164591378-8be69c4b-7d62-4ff0-896e-c3c7c7986d35.png)](#)
+[![Go-Rental](https://user-images.githubusercontent.com/39787908/167973635-9286e09f-88c6-4055-bcfd-4c35b01e6fb9.png)](#)
 
 ## Installation
 
@@ -39,8 +39,7 @@ Repo Responsive Web : https://github.com/asherginting/fw5-responsive-website
 
 ## 💻 Live Demo
 
-[Go - Rental - Netlify](#) <br>
-[Go - Rental - Heroku](#)
+[Go - Rental Frontend - Netlify](https://go-rental-frontend.netlify.app/) <br>
 
 ## ✍️ Authors
 
