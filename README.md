@@ -1,5 +1,5 @@
-<a href="https://aimeos.org/">
-    <img src="https://i.ibb.co/8P4m5hB/Icon-Go-Rental.png" alt="Aimeos logo" title="Aimeos" align="right" />
+<a href="https://go-rental-frontend.netlify.app">
+    <img src="https://user-images.githubusercontent.com/39787908/167974463-2cd9bd75-a4d2-45bb-be0f-8c56c111e866.png" alt="Go-Rental Logo" title="Go-Rental" height="150" align="right" />
 </a>
 
 # Go - Rental Frontend
