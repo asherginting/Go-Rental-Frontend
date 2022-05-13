@@ -129,16 +129,12 @@ body {
 
 /* section */
 .vehicle-type section {
-  margin-top: 160px;
+  margin-top: 80px;
 }
 
 .vehicle-type h2 {
   font-family: 'Playfair Display', Times, serif;
   font-weight: bold;
-}
-
-.vehicle-type section p {
-  margin: 80px 0;
 }
 
 .vehicle-type .head {
@@ -201,7 +197,8 @@ section .highlight span {
   color: #fff;
   font-weight: bold;
   margin-bottom: 30px;
-  height: 50px;
+  height: 40px;
+  margin-left: 10px;
 }
 
 .vehicle-type .btn-green:hover {
@@ -239,10 +236,6 @@ section .highlight span {
   } */
   .vehicle-type .mail-profile .message {
     margin-left: -13px;
-  }
-
-  .vehicle-type .form-search {
-    height: 225px;
   }
 
   .vehicle-type nav form {
