@@ -1,31 +1,26 @@
 const searchURL = (ev) => {
-    const key = ev.target.elements['brand'].value;
-    const fil = ev.target.elements['location'].value;
-    const min = ev.target.elements['minimum'].value;
-    const max = ev.target.elements['maximum'].value;
-    let url = '';
-    if (key) {
-        url = `/search?keyword=${key}`;
-    }
-    if (fil) {
-        url = `/search?keyword=${key}&location=${fil}`;
-    }
-    if (min) {
-        url = `/search?keyword=${key}&min=${min}`;
-    }
-    if (max) {
-        url = `/search?keyword=${key}&max=${max}`;
-    }
-    if (min && fil) {
-        url = `/search?keyword=${key}&location=${fil}&min=${min}`;
-    }
-    if (max && fil) {
-        url = `/search?keyword=${key}&location=${fil}&min=${max}`;
-    }
-    if (fil && max && min) {
-        url = `/search?keyword=${key}&location=${fil}&min=${min}&max=${max}`;
-    }
-    return url;
+    const key = ev.target.elements.brand.value;
+    const fil = ev.target.elements.location.value;
+    const min = ev.target.elements.minimum.value;
+    const max = ev.target.elements.maximum.value;
+    const dataSearch = [
+        { param: 'keyword', input: key },
+        { param: 'location', input: fil },
+        { param: 'min', input: min },
+        { param: 'max', input: max },
+    ];
+    let resUrl = '/search?';
+    dataSearch.forEach((data) => {
+        if (data.input) {
+            if (resUrl[8]) {
+                resUrl += `&${data.param}=${data.input}`;
+            } else {
+                resUrl += `${data.param}=${data.input}`;
+            }
+        }
+    });
+
+    return resUrl;
 };
 
 export default searchURL;
