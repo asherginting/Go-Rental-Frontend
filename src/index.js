@@ -5,14 +5,14 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'react-loading-skeleton/dist/skeleton.css'
-import store from './redux/store'
+import 'react-loading-skeleton/dist/skeleton.css';
+import store from './redux/store';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

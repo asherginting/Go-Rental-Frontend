@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 function AddItems() {
-  return (
-    <div>AddItems</div>
-  )
+    return (
+        <div>AddItems</div>
+    );
 }
 
-export default AddItems
+export default AddItems;
