@@ -57,10 +57,12 @@ const VehicleType = () => {
   return (      
     <div className='vehicle-type'>
       <form onSubmit={handleSubmit} className="container d-flex position-relative">
-        <input className="form-control" name='search' type="search" placeholder="Search vehicle (ex. cars, cars name)" />
-        <input className="form-control" name='filter' type="search" placeholder="Filter (ex. location)" />
-        <button type="submit" className="btn position-absolute end-0" aria-label="search button">
-          <i className="search-icon"><BiSearchAlt2 /></i>
+        <input className="form-control" name='search' type="search" placeholder="Search vehicle name" />
+        <input className="form-control" name='location' type="search" placeholder="Location" />
+        <input className="form-control" name='min' type="number" placeholder="Min. Price" />
+        <input className="form-control" name='max' type="number" placeholder="Max. Price" />
+        <button type='submit' className="btn login">
+        <i className="search-icon"><BiSearchAlt2 /></i>
         </button>
       </form>
       {product('Popular in town', popular)}
