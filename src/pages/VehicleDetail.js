@@ -11,7 +11,6 @@ import handleImg from '../assets/images/no-image.jpg';
 import activeNav from '../helper/activeNav';
 import { getVehicleDetail } from '../redux/actions/vehicle';
 import { empty, increment, decrement } from '../redux/actions/counter';
-import LoadingSkeleton from '../components/LoadingSkeleton';
 
 function VehicleDetail() {
     const { id } = useParams();
@@ -45,7 +44,7 @@ function VehicleDetail() {
 
     return (
         <div className="vehicle-detail my-5">
-            {vehicleDetail.isLoading ? <div className="mt-5 pt-5"><LoadingSkeleton count={2} col="col-12 col-lg-6 mt-5" /></div>
+            {vehicleDetail.isLoading ? <div className="mt-5 pt-5"></div>
                 : (
                     <section className="container first-container">
                         <div className="row pt-5 detail-vehicle">
