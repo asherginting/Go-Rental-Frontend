@@ -24,12 +24,6 @@ const bikeState = {
     isLoading: false,
     isError: false,
 };
-const pickUpState = {
-    vehicle: [],
-    pageInfo: {},
-    isLoading: false,
-    isError: false,
-};
 const detailState = {
     vehicle: [],
     isLoading: false,
@@ -164,39 +158,6 @@ const vehicleReducer = combineReducers({
             return {...state};
         }
         case 'GET_NEXT_BIKE_FULFILLED': {
-            const {data} = action.payload;
-            state.vehicle.push(...data.results);
-            state.pageInfo = data.pageInfo;
-            state.isLoading = false;
-            return {...state};
-        }
-        default: {
-            return {...state};
-        }
-        }
-    },
-    pickup : (state = pickUpState, action) => {
-        switch(action.type) {
-        case 'GET_PICKUP_PENDING': {
-            state.isLoading = true;
-            return {...state};
-        }
-        case 'GET_PICKUP_FULFILLED': {
-            const {data} = action.payload;
-            state.vehicle = data.results;
-            state.pageInfo = data.pageInfo;
-            state.isLoading = false;
-            return {...state};
-        }
-        case 'GET_PICKUP_REJECTED': {
-            state.isError = true;
-            return {...state};
-        }
-        case 'GET_NEXT_PICKUP_PENDING': {
-            state.isLoading = true;
-            return {...state};
-        }
-        case 'GET_NEXT_PICKUP_FULFILLED': {
             const {data} = action.payload;
             state.vehicle.push(...data.results);
             state.pageInfo = data.pageInfo;
