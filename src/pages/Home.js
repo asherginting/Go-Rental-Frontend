@@ -4,7 +4,7 @@ import user from '../assets/images/user-homepage.png';
 import {GrFormPrevious, GrFormNext} from 'react-icons/gr';
 import {FaStar} from 'react-icons/fa';
 import Vehicle from '../components/Vehicle';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {IoChevronForward} from 'react-icons/io5';
 import LoadingSkeleton from '../components/LoadingSkeleton';
 import { useSelector, useDispatch } from 'react-redux';
@@ -13,11 +13,21 @@ import { popular } from '../redux/actions/vehicle';
 const Home = () => {
     const vehiclePopular = useSelector((state) => state.vehicleReducer.popular);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
         dispatch(popular());
     }, []);
+
+    const handleSubmit = (ev) => {
+        ev.preventDefault();
+        const location = document.getElementById('location').value;
+        const type = document.getElementById('type').value;
+        const payment = document.getElementById('payment').value;
+        const date = document.getElementById('date').value;
+        navigate(`/search?location=${location}&type=${type}&payment=${payment}&date${date}`);
+    };
 
     return (
         <>
@@ -30,7 +40,7 @@ const Home = () => {
                         <form className="col-sm-12 col-lg-6">
                             <div className="row">
                                 <div className="col-sm-6">
-                                    <select className="option-form">
+                                    <select id="location" className="option-form">
                                         <option className='d-none'>Location</option>
                                         <option>Jakarta</option>
                                         <option>Bali</option>
@@ -40,7 +50,7 @@ const Home = () => {
                                     </select>
                                 </div>
                                 <div className="col-sm-6">
-                                    <select className="option-form">
+                                    <select id="type" className="option-form">
                                         <option className='d-none'>Type</option>
                                         <option>Cars</option>
                                         <option>Motorbike</option>
@@ -50,7 +60,7 @@ const Home = () => {
                             </div>
                             <div className="row">
                                 <div className="col-sm-6">
-                                    <select className="option-form">
+                                    <select id="payment" className="option-form">
                                         <option className='d-none'>Payment</option>
                                         <option>Cash</option>
                                         <option>PayLater</option>
@@ -63,7 +73,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <Link to="/vehicle-type">
-                                <button className="btn btn-blue" aria-label="explore">Explore</button>
+                                <button type="submit" onClick={handleSubmit} className="btn btn-blue" aria-label="explore">Explore</button>
                             </Link>
                         </form>
                     </div>
