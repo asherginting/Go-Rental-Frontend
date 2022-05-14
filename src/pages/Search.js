@@ -130,12 +130,6 @@ export default function Search() {
                     <div className="col-md-3">
                         <input className="form-control" name="maximum" type="number" placeholder="Max. Price Vehicle" />
                     </div>
-                    {/* <div className="col-md-4">
-                        <input className="form-control my-2" name="minimum" type="number" placeholder="Min price" />
-                    </div> */}
-                    {/* <div className="col-md-4">
-                        <input className="form-control my-2" name="maximum" type="number" placeholder="Max price" />
-                    </div> */}
                     <button type='submit' className="btn login d-flex position-relative">
                         {' '}
                         <i className="search-icon"><BiSearchAlt2 /></i>
