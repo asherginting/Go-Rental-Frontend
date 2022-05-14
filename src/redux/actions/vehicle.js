@@ -42,6 +42,11 @@ export const searchVehicle = (key, location, min, max) => {
     };
 };
 
+export const getNewVehicle = () => ({
+    type: 'GET_NEW_VEHICLE',
+    payload: http().get('/vehicles/new'),
+});
+
 export const nextSearchVehicle = (key, location, min, max, page) => {
     return {
         type: 'SEARCH_VEHICLE',
