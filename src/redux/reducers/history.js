@@ -92,7 +92,6 @@ export const detailHistory = (state = detailState, action) => {
         const {data} = action.payload;
         state.isLoading = false;
         state.isError = false;
-        // state.history = data.results
         Object.assign(state.history, {...data.results});
         return {...state};
     }
