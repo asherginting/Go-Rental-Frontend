@@ -102,7 +102,7 @@ header.login .btn-signup:hover {
 }
 
 .login .form-register .login:hover {
-  background-color: #EBEFD0;
+  background-color: #ECECEC;
   color: #085F63;
 }
 
@@ -113,7 +113,7 @@ header.login .btn-signup:hover {
 }
 
 .login .form-register .google:hover {
-  background-color: #EBEFD0;
+  background-color: #ECECEC;
   color: #085F63;
 }
 

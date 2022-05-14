@@ -30,6 +30,7 @@ const NavAfterLogin = () => {
                                 <img src={auth.userData.image || noImage} alt="Photoprofile." />
                             </Link>
                         </div>
+                        
                     </div>
                 </div>
             </nav>

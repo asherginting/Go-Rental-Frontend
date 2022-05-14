@@ -202,7 +202,7 @@ section .highlight span {
 }
 
 .vehicle-type .btn-green:hover {
-  background-color: #EBEFD0;
+  background-color: #ECECEC;
   color: #0085DF;
 }
 

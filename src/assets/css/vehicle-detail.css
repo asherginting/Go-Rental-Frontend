@@ -258,7 +258,7 @@ body {
 
 .vehicle-detail .reservation input.form-control:focus,
 .vehicle-detail .reservation select.form-select:focus {
-  box-shadow: 0 0 0 0.25rem rgba(13, 253, 161, 0.25);
+  box-shadow: none !important;
 }
 
 .vehicle-detail .pay-now .btn-green {

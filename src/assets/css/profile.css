@@ -96,7 +96,7 @@ nav .mail-profile img {
 }
 
 .profile .form-check-input {
-  background-color: #EBEFD0;
+  background-color: #ECECEC;
 }
 
 .profile .form-check-input:focus {
@@ -143,7 +143,7 @@ nav .mail-profile img {
 .profile form .btn-save:hover,
 .profile form .btn-edit:hover,
 .profile form .btn-cancel:hover {
-  background-color: #EBEFD0;
+  background-color: #ECECEC;
   color: #085F63;
 }
 
