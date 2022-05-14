@@ -29,6 +29,13 @@ export const updateProfile = (state = updateState, action) => {
         state.isSuccess = false;
         return { ...state };
     }
+    case 'UPDATE_PROFILE_CLEAR': {
+        state.isError = false;
+        state.message = '';
+        state.isSuccess = false;
+        state.user = false;
+        return { ...state };
+    }
     default: {
         return { ...state };
     }
@@ -116,23 +123,35 @@ export const verifyUser = (state = verifyState, action) => {
 const changePwdState = {
     isLoading: false,
     isError: false,
+    isSuccess: false,
+    errMessage: '',
 };
 
 export const changePwd = (state = changePwdState, action) => {
     switch (action.type) {
     case 'CHANGE_PASSWORD_PENDING': {
         state.isError = false;
+        state.isSuccess = false;
+        state.errMessage = '';
+        state.isLoading = true;
         return { ...state };
     }
     case 'CHANGE_PASSWORD_FULFILLED': {
-        state.isLoading = false;
         state.isError = false;
+        state.isSuccess = true;
+        state.errMessage = '';
+        state.isLoading = false;
         return { ...state };
     }
     case 'CHANGE_PASSWORD_REJECTED': {
-        state.isLoading = false;
         state.isError = true;
+        state.isSuccess = false;
+        state.errMessage = action.payload.response.data.message;
+        state.isLoading = false;
         return { ...state };
+    }
+    case 'CHANGE_PASSWORD_CLEAR': {
+        return { ...changePwdState };
     }
     default: {
         return { ...state };
@@ -143,23 +162,35 @@ export const changePwd = (state = changePwdState, action) => {
 const verifyPwdState = {
     isLoading: false,
     isError: false,
+    isSuccess: false,
+    errMessage: '',
 };
 
 export const verifyPwd = (state = verifyPwdState, action) => {
     switch (action.type) {
     case 'VERIFY_PASSWORD_PENDING': {
         state.isError = false;
+        state.isSuccess = false;
+        state.errMessage = '';
+        state.isLoading = true;
         return { ...state };
     }
     case 'VERIFY_PASSWORD_FULFILLED': {
-        state.isLoading = false;
         state.isError = false;
+        state.isSuccess = true;
+        state.errMessage = '';
+        state.isLoading = false;
         return { ...state };
     }
     case 'VERIFY_PASSWORD_REJECTED': {
-        state.isLoading = false;
         state.isError = true;
+        state.isSuccess = false;
+        state.errMessage = action.payload.response.data.message;
+        state.isLoading = false;
         return { ...state };
+    }
+    case 'VERIFY_PASSWORD_CLEAR': {
+        return { ...verifyPwdState };
     }
     default: {
         return { ...state };
