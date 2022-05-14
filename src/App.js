@@ -4,7 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import ForgotPassword from './pages/ForgotPassword';
+import ForgotPass from './pages/ForgotPass';
 import VehicleType from './pages/VehicleType';
 import VehicleMore from './pages/VehicleMore';
 import VehicleDetail from './pages/VehicleDetail';
@@ -43,7 +43,6 @@ const App = () => {
             dispatch(category('CARS', 'cars'));
             dispatch(category('MOTORBIKE', 'motorbike'));
             dispatch(category('BIKE', 'bike'));
-            dispatch(category('PICKUP', 'pickup'));
         }
     }, [dispatch, auth.token]);
   
@@ -57,7 +56,7 @@ const App = () => {
                     <Layout noNavbar={true}><Login /></Layout>
                 } />
                 <Route path="forgot-password" element={
-                    <Layout noNavbar={true}><ForgotPassword /></Layout>
+                    <Layout noNavbar={true}><ForgotPass /></Layout>
                 } />
                 <Route path="signup" element={
                     <Layout noNavbar={true} signup={true}><Signup /></Layout>
