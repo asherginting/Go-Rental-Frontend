@@ -20,6 +20,7 @@ import { category } from './redux/actions/vehicle';
 import Verify from './pages/Verify';
 import VerifyForgot from './pages/VerifyForgot';
 import AddItems from './pages/AddItems';
+import About from './pages/About';
 
 const App = () => {
     const {auth} = useSelector(state => state);
@@ -93,6 +94,9 @@ const App = () => {
                 } />
                 <Route path={'add-items'} element={
                     <Layout><AddItems /></Layout>
+                } />
+                <Route path="/about" element={
+                    <Layout><About /></Layout>
                 } />
             </Routes>
         </BrowserRouter>
