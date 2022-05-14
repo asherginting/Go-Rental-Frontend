@@ -5,10 +5,11 @@ import { Link, Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { changePassword } from '../redux/actions/user';
 
-function ForgotPassword() {
+function ForgotPass() {
     const dispatch = useDispatch();
 
     const { changePwd } = useSelector((state) => state);
+    const { verifyUser} = useSelector((state) => state);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -23,7 +24,7 @@ function ForgotPassword() {
 
     return (
         <div className="forgot">
-            {changePwd.isSuccess && <Navigate to="/verifyforgot" />}
+            {changePwd.isSuccess && <Navigate to="/verify/password" />}
             <header>
                 <div className="opacity">
                     <div className="container">
@@ -33,11 +34,12 @@ function ForgotPassword() {
                         </Link>
                         <h1 className="text-center">Don`t worry, we got your back!</h1>
                         <p className="text-center">
-                            You will receive a link to reset your password.
+              You will receive a link to reset your password.
                             <br />
-                            If you haven`t received any link, click resend link
+              If you haven`t received any link, click resend link
                         </p>
                         <form className="text-center form">
+                            {verifyUser.isError && verifyUser.errMessage && <div className="mx-5 text-center text-white h4 mt-3 fw-bold">{verifyUser.errMessage}</div>}
                             <input type="email" placeholder="Enter your email address" id="email" />
                             {changePwd.isLoading
                                 ? <div className="spinner-border mt-5" role="status" />
@@ -55,5 +57,4 @@ function ForgotPassword() {
     );
 }
 
-export default ForgotPassword;
-
+export default ForgotPass;
