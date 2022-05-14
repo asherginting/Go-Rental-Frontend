@@ -30,7 +30,7 @@ export const updateProfile = (token, data) => {
 
     return ({
         type: 'UPDATE_PROFILE',
-        payload: http(token).patch('/users', formData),
+        payload: http(token).patch('/profile', formData),
     });
 };
 

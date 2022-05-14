@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../assets/css/profile.css';
-import {BsFillPenFill} from 'react-icons/bs';
+import {HiPencilAlt} from 'react-icons/hi';
 import deleteActiveNav from '../helper/deleteActiveNav';
 import noImage from '../assets/images/no-pp.jpg';
 import BtnLogout from '../components/BtnLogout';
@@ -113,7 +113,7 @@ export default function Profile() {
                                         ? <img src={image} onError={(e) => { e.target.src = noImage; }} alt={name} />
                                         : <img src={noImage} alt={name} />}
                                     <button className="btn-pen badge" type="button">
-                                        <BsFillPenFill />
+                                        <HiPencilAlt size='25' />
                                         <input
                                             id="image"
                                             style={{
