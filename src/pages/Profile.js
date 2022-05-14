@@ -121,8 +121,8 @@ export default function Profile() {
                                             }}
                                             className="position-absolute"
                                             type="file"
-                                            onChange={() => ((document.getElementById('image').files[0].size >= 2000000 && setErrmessage('File size must be under 2mb'))
-                                            || (document.getElementById('image').files[0].type.split('/')[0] !== 'image' && setErrmessage('File must be image')))}
+                                            onChange={() => ((document.getElementById('image').files[0].size >= 2000000 && setErrmessage('Max image size is 2MB'))
+                                            || (document.getElementById('image').files[0].type.split('/')[0] !== 'image' && setErrmessage('Must be of image type')))}
                                         />
                                     </button>
                                     <div className="col-lg-6 text-center align-items-center justify-content-center">

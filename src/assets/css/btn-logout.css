@@ -6,6 +6,7 @@
   border-radius: 8px;
   font-weight: bold;
   font-size: 20px;
+  margin-left: 5px;
 }
 
 .btn-logout:hover {
