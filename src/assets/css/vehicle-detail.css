@@ -294,6 +294,7 @@ body {
 .vehicle-detail .payment .form-select {
   height: 75px;
   border-radius: 8px;
+  box-shadow: none !important;
 }
 
 .vehicle-detail .payment .form-select {
