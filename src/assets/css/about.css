@@ -75,9 +75,6 @@ header.header-about .opacity .line-about {
 
 @media all and (max-width: 650px) {
 
-  /* nav .container-fluid {
-    justify-content: center !important;
-  } */
   header.header-about .container {
     text-align: center;
   }

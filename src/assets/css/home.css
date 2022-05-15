@@ -142,24 +142,10 @@ header.home .opacity .btn {
   font-size: 30px;
 }
 
-/* main.home section img {
-  border-radius: 10px;
-  margin-bottom: 15px;
-} */
 main.home section a {
   text-decoration: none;
 }
 
-/* main.home section .highlight {
-  margin-top: -67px;
-  position: relative;
-  background-color: #ffff;
-  width: 120px;
-  height: 56px;
-  border-radius: 0px 6px 0px 0px;
-  font-family: 'Nunito', sans-serif;
-  color: #042521;
-} */
 main.home section .highlight h5 {
   color: #042521;
   font-weight: 600;
@@ -245,41 +231,6 @@ main.home section .highlight span {
     margin-bottom: 35px;
   }
 
-  /* nav {
-    height: 95px;
-  }
-  nav .navigation {
-    flex-wrap: wrap;
-    margin: 15px 0 !important;
-  }
-  .navbar-nav li a {
-    padding: 15px 0;
-  }
-  .main-nav {
-    width: 100%;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .button-section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-  }
-  .navbar-nav,
-  .button-section,
-  .btn-blue,
-  .btn-outline {
-    width: 100%;
-  }
-  nav .btn-outline,
-  nav .btn-blue {
-    padding: 15px;
-  }
-  .btn-outline {
-    margin-bottom: 20px;
-  } */
 }
 
 @media all and (max-width: 768px) {
@@ -295,9 +246,6 @@ main.home section .highlight span {
 
 @media all and (max-width: 650px) {
 
-  /* nav .container-fluid {
-    justify-content: center !important;
-  } */
   header.home .container {
     text-align: center;
   }
@@ -311,9 +259,6 @@ main.home section .highlight span {
     margin: 0 auto;
   }
 
-  /* nav .navigation {
-    padding: 10px;
-  } */
   header.header-homepage {
     margin-top: 100px;
   }

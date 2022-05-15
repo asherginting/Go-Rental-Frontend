@@ -6,7 +6,6 @@
 
 .signup-page .img-section {
   background-image: url(../images/signup.png);
-  /* background-repeat: no-repeat; */
   background-repeat: no-repeat;
   background-size: cover;
 }

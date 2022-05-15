@@ -4,31 +4,6 @@ body {
   padding: 0;
 }
 
-/* nav {
-  height: 150px;
-}
-nav .navigation {
-  display: flex;
-  justify-content: flex-end;
-}
-nav .mail-profile img {
-  width: 54.62px;
-}
-.message {
-  text-decoration: none;
-}
-.total-message {
-  position: relative;
-  top: -18px;
-  margin-right: -18px;
-  border-radius: 50px;
-  font-size: 15px;
-  font-weight: bold;
-}
-.profile img {
-  border-radius: 30px;
-} */
-
 /* header */
 
 .profile header {
@@ -165,12 +140,5 @@ nav .mail-profile img {
 }
 
 @media all and (max-width: 991px) {
-  /* nav {
-    height: 95px;
-  }
-  nav .navigation#navbarNav {
-    align-items: flex-end;
-    flex-direction: column;
-    margin: 20px 0;
-  } */
+  
 }

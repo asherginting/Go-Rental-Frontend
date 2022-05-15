@@ -8,41 +8,6 @@ body {
   padding: 0;
 }
 
-/* .vehicle-detail nav {
-  height: 150px;
-}
-.vehicle-detail nav .navigation {
-  font-size: 1rem;
-  padding: 0 65px;
-  display: flex;
-  justify-content: flex-end;
-}
-.vehicle-detail nav .navbar-collapse {
-  padding-right: 0;
-}
-.vehicle-detail nav .mail-profile img {
-  width: 54.62px;
-}
-.vehicle-detail .message {
-  text-decoration: none;
-}
-.vehicle-detail .total-message {
-  background-color: #49BEB7;
-  position: relative;
-  top: -18px;
-  margin-right: -18px;
-  border-radius: 50px;
-  font-size: 15px;
-  font-weight: bold;
-}
-.vehicle-detail .icon-message {
-  font-size: 55px;
-  color: #0d9299;
-}
-.vehicle-detail .profile img {
-  border-radius: 30px;
-} */
-
 /* button */
 .vehicle-detail .btn:focus {
   box-shadow: none;
@@ -107,9 +72,6 @@ body {
   font-size: 35px;
 }
 
-/* .img-section, .description-section {
-  height: 409px;
-} */
 .vehicle-detail img,
 .vehicle-detail .cover-image {
   border-radius: 10px;
@@ -312,9 +274,6 @@ body {
   padding: 30px 40px;
 }
 
-/* .qty-border {
-  padding: 20px 30px;
-} */
 .vehicle-detail .payment .rent-data .fw-bold {
   font-size: 25px;
 }
@@ -364,29 +323,6 @@ body {
 
 @media all and (max-width: 991px) {
 
-  /* .vehicle-detail nav {
-    height: 95px;
-  }
-  .vehicle-detail nav .navigation#navbarNav {
-    align-items: flex-end;
-    flex-direction: column;
-    margin: 20px 0;
-    padding: 0;
-  }
-  .vehicle-detail .navbar-nav,
-  .vehicle-detail .mail-profile {
-    width: 100%;
-  }
-  .vehicle-detail .mail-profile {
-    flex-direction: column;
-    align-items: start !important;
-  }
-  .vehicle-detail .mail-profile a {
-    width: 100%;
-  }
-  .vehicle-detail nav form {
-    margin: 20px 0;
-  } */
   .vehicle-detail .reservation .img-section img {
     /* width: 100%; */
     height: auto;
@@ -509,11 +445,6 @@ body {
     position: unset;
   }
 
-  .vehicle-detail .payment .img-section img {
-    /* width: 100%;
-    height: auto; */
-  }
-
   .vehicle-detail .payment .description h2 {
     font-size: 20px;
   }
@@ -587,10 +518,6 @@ body {
 @media all and (max-width: 575px) {
   .vehicle-detail .img-section {
     height: 100%;
-  }
-
-  .vehicle-detail .img-section img {
-    /* width: 80%; */
   }
 
   .vehicle-detail .payment .btn-copy-top {
