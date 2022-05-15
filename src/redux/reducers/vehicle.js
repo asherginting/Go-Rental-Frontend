@@ -35,6 +35,12 @@ const searchState = {
     isLoading: false,
     isError: false,
 };
+const newVehicleState = {
+    vehicle: [],
+    pageInfo: {},
+    isLoading: false,
+    isError: false,
+};
 
 const vehicleReducer = combineReducers({
     popular : (state = popularState, action) => {
@@ -221,6 +227,40 @@ const vehicleReducer = combineReducers({
         }
         default: {
             return {...state};
+        }
+        }
+    },
+    newVehicle: (state = newVehicleState, action) => {
+        switch (action.type) {
+        case 'GET_NEW_VEHICLE_PENDING': {
+            state.isLoading = true;
+            return { ...state };
+        }
+        case 'GET_NEW_VEHICLE_FULFILLED': {
+            const { data } = action.payload;
+            state.vehicle = data.results;
+            state.pageInfo = data.pageInfo;
+            state.isLoading = false;
+            return { ...state };
+        }
+        case 'GET_NEW_VEHICLE_REJECTED': {
+            state.isError = true;
+            return { ...state };
+        }
+        case 'GET_NEXT_NEW_VEHICLE_PENDING': {
+            state.isLoading = true;
+            return { ...state };
+        }
+        case 'GET_NEXT_NEW_VEHICLE_FULFILLED': {
+            const { data } = action.payload;
+            state.vehicle = [...state.vehicle, ...data.results];
+            state.pageInfo = data.pageInfo;
+            state.isLoading = false;
+            console.log('search next', state.vehicle);
+            return { ...state };
+        }
+        default: {
+            return { ...state };
         }
         }
     },
