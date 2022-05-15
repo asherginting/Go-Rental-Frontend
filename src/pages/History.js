@@ -76,7 +76,7 @@ export default function History() {
                     </div>
                     <div className="btn-delete d-none">
                         <button onClick={(ev) => handleDelete(ev, idHistory)} className="btn" type="button">
-                            <BsFillTrashFill size="25" color="danger"/>
+                            <BsFillTrashFill size="25" color="#0085DF"/>
                         </button>
                     </div>
                 </div>
