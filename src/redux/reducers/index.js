@@ -7,7 +7,7 @@ import counter from './counter';
 import { history, detailHistory, deleteHistory } from './history';
 import { payment } from './payment';
 import register from './register';
-import AddItems from '../../pages/AddItems';
+import AddItems from './addItems';
 import {
     updateProfile, registerUser, verifyUser, changePwd, verifyPwd,
 } from './user';
