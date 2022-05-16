@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import NavList from './NavList';
-import AdminNavList from './AdminNavList';
 import '../../assets/css/vehicle-type.css';
 import logo from '../../assets/images/Go-Rental x100.png';
 import {FiMail} from 'react-icons/fi';
@@ -31,7 +30,6 @@ export default function NavPopular() {
                     </button>
                     <div className="collapse navbar-collapse navigation" id="navbarNav">
                         <NavList onClick={() => setProgress(100)}/>
-                        <AdminNavList onClick={() => setProgress(100)}/>
                         <div className="mail-profile ms-xl-5 d-flex align-items-center">
                             <Link to='/message' className="me-4 message"><span className="text-white badge total-message">0</span><FiMail className='icon-message' /></Link>
                             <Link onClick={() => setProgress(100)} to='/profile' className='profile'>

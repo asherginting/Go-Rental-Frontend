@@ -7,7 +7,7 @@ import {FiMail} from 'react-icons/fi';
 import logo from '../../assets/images/Go-Rental x100.png';
 import noImage from '../../assets/images/no-pp.jpg';
 import { useSelector } from 'react-redux';
-import AdminNavList from './AdminNavList';
+
 import LoadingBar from 'react-top-loading-bar';
 
 const NavAfterLogin = () => {
@@ -32,7 +32,6 @@ const NavAfterLogin = () => {
                     </button>
                     <div className="collapse navbar-collapse navigation" id="navbarNav">
                         <NavList onClick={() => setProgress(100)}/>
-                        <AdminNavList onClick={() => setProgress(100)}/>
                         <div className="mail-profile ms-xl-5 d-flex align-items-center">
                             <Link onClick={() => setProgress(100)} to='/message' className="ms-lg-3 me-4 message"><span className="text-white badge total-message">0</span><FiMail className='icon-message' /></Link>
                             <Link onClick={() => setProgress(100)} to='/profile' className='profile' >
