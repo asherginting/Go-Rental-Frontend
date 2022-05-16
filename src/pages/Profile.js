@@ -4,6 +4,7 @@ import {HiPencilAlt} from 'react-icons/hi';
 import deleteActiveNav from '../helper/deleteActiveNav';
 import noImage from '../assets/images/no-pp.jpg';
 import BtnLogout from '../components/BtnLogout';
+import BtnAdmin from '../components/BtnAdmin';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { updateProfile as updated } from '../redux/actions/user';
@@ -12,6 +13,7 @@ import { validateEmail, validatePhone } from '../helper/validateCheck';
 
 export default function Profile() {
     const { auth } = useSelector((state) => state);
+    // const authadmin = useSelector(state => state.auth);
     const { updateProfile } = useSelector((state) => state);
     const [checked, setChecked] = useState();
     const [errMessage, setErrmessage] = useState(null);
@@ -48,8 +50,6 @@ export default function Profile() {
     const updateForm = () => {
         let data = {};
         const imageChange = document.getElementById('image').files[0];
-        // const imageChange = imgChange;
-        // const genderChange = getGender();
         const genderChange = checked;
         const emailChange = document.getElementById('email').value;
         const addressChange = document.getElementById('address').value;
@@ -125,6 +125,9 @@ export default function Profile() {
                                             || (document.getElementById('image').files[0].type.split('/')[0] !== 'image' && setErrmessage('Must be of image type')))}
                                         />
                                     </button>
+                                    <div className="col-lg-6 text-center align-items-center justify-content-center">
+                                        <BtnAdmin className="mt-4"/>
+                                    </div>
                                     <div className="col-lg-6 text-center align-items-center justify-content-center">
                                         <BtnLogout className="mt-4"/>
                                     </div>

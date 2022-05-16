@@ -1,0 +1,15 @@
+.btn-admin {
+  background-color: #0085DF;
+  border: none;
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.btn-admin:hover {
+  background-color: #ECECEC;
+  color: #0085DF;
+}
