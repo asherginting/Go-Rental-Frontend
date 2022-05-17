@@ -201,40 +201,31 @@ function VehicleDetail() {
                                     accept='profileImage'
                                     // onChange={(e) => fileInputHandler(e)}
                                 />
+                                <div className='col mt-5'>
+                                    <button className="btn btn-primary" style={{ cursor: 'pointer', fontWeight:'bold' }}  >Update Vehicle</button>
+                                </div>
+                                <div className='col mt-2'>
+                                    <button  className="btn btn-danger" style={{ color:'white', cursor: 'pointer', fontWeight:'bold' }} >Delete Vehicle</button>
+                                </div>
                             </div>
                             <div className="col">
                                 <div className="desc">
                                     <div className="mb-3">
+                                        <label style={{ fontSize: 24, fontFamily:'Playfair Display', fontWeight:'bold'}}>Category</label>
+                                        <select name='id_category' id='id_category' className="form-select  w-100 mb-3">
+                                            <option   style={{ display: 'none' }}>Select Category</option>
+                                            <option value="1" className='text-dark'>Cars</option>
+                                            <option value="2" className='text-dark'>Motorbike</option>
+                                            <option value="3" className='text-dark'>Bike</option>
+                                        </select>
                                         <input 
-                                            placeholder='Name' 
-                                            id='name' 
-                                            name='name' 
+                                            placeholder='Vehicle Name' 
+                                            id='brand' 
+                                            name='brand' 
                                             className="d-block w-100 input-underline" 
                                             type="text" 
-                                            // value={name} 
-                                            // onChange={(e) => setName(e.target.value)}
-                                        />
-                                    </div>
-                                    <div className="mb-3">
-                                        <input 
-                                            placeholder='Color' 
-                                            id='color' 
-                                            name='color' 
-                                            className="d-block w-100 input-underline" 
-                                            type="text" 
-                                            // value={color} 
-                                            // onChange={(e) => setColor(e.target.value)}
-                                        />
-                                    </div>
-                                    <div className="mb-3">
-                                        <input 
-                                            placeholder='Location' 
-                                            id='loc' 
-                                            name='loc' 
-                                            className="d-block w-100 input-underline" 
-                                            type="text" 
-                                            // value={loc} 
-                                            // onChange={(e) => setLoc(e.target.value)}
+                                            // value={brand} 
+                                            // onChange={(e) => setBrand(e.target.value)}
                                         />
                                     </div>
                                     <div className="mb-3">
@@ -248,30 +239,38 @@ function VehicleDetail() {
                                             // onChange={(e) => setCapacity(e.target.value)}
                                         />
                                     </div>
-                                    <label style={{ fontSize: 24, fontFamily:'Playfair Display', fontWeight:'bold'}}>Status</label>
-                                    <select name='isAvailable' id='isAvailable' className="form-select  w-100 mb-3" >
-                                        <option   style={{ display: 'none' }}>Select Status</option>
-                                        <option value="1" className='text-success'>Available</option>
-                                        <option value="0" className='text-danger'>Full Booked</option>
-                                    </select>
-                                    <label style={{ fontSize: 24, fontFamily:'Playfair Display', fontWeight:'bold'}} className='mb-2'>Category</label>
-                                    <select name='categoryId' id='categoryId' className="form-select w-100 mb-3 py-3 px-4"  style={{backgroundColor:'#072227', color : '#4FBDBA'}}>
-                                        <option style={{ display: 'none' }}>Category</option>
-                                        <option value="1" >Car</option>
-                                        <option value="2" >Motorbike</option>
-                                        <option value="3" >Bike</option> 
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row mt-4">
-                            <div className="col mb-4">
-                                <div className='row text-center'>
-                                    <div className='col'>
-                                        <button className="filled w-50" style={{ cursor: 'pointer', fontWeight:'bold' }} >Update Vehicle</button>
+                                    <div className="mb-3">
+                                        <input 
+                                            placeholder='Location' 
+                                            id='location' 
+                                            name='location' 
+                                            className="d-block w-100 input-underline" 
+                                            type="text" 
+                                            // value={location} 
+                                            // onChange={(e) => setLocation(e.target.value)}
+                                        />
                                     </div>
-                                    <div className='col'>
-                                        <button  className="dark w-50" style={{ color:'#32DBC6', cursor: 'pointer', fontWeight:'bold' }}>Delete Vehicle</button>
+                                    <div className="mb-3">
+                                        <input 
+                                            placeholder='Price' 
+                                            id='price' 
+                                            name='price' 
+                                            className="d-block w-100 input-underline" 
+                                            type="text" 
+                                            // value={price} 
+                                            // onChange={(e) => setPrice(e.target.value)}
+                                        />
+                                    </div>
+                                    <div className="mb-3">
+                                        <input 
+                                            placeholder='Qty' 
+                                            id='qty' 
+                                            name='qty' 
+                                            className="d-block w-100 input-underline" 
+                                            type="text" 
+                                            // value={qty} 
+                                            // onChange={(e) => setQty(e.target.value)}
+                                        />
                                     </div>
                                 </div>
                             </div>
