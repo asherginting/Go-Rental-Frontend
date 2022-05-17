@@ -8,6 +8,7 @@ import { history, detailHistory, deleteHistory } from './history';
 import { payment } from './payment';
 import register from './register';
 import AddItems from './addItems';
+import vehicleDetail from './vehicleDetail';
 import {
     updateProfile, registerUser, verifyUser, changePwd, verifyPwd,
 } from './user';
@@ -32,6 +33,7 @@ const rootReducer = combineReducers({
     changePwd,
     verifyPwd,
     AddItems,
+    vehicleDetail,
 });
 
 export default rootReducer;
